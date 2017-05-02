@@ -323,3 +323,24 @@
 	"begin_code.h"
 	"close_code.h"
 
+1493763653 source:c:\users\botpc\desktop\workspace\github\wproject\capp.cpp
+	"CApp.h"
+
+1493763863 c:\users\botpc\desktop\workspace\github\wproject\capp.h
+	<SDL.h>
+	<ctime>
+	<cstdio>
+	"locale/localeEN.h"
+	"define.h"
+	"CEvent.h"
+
+1493763824 c:\users\botpc\desktop\workspace\github\wproject\define.h
+
+1493762850 source:c:\users\botpc\desktop\workspace\github\wproject\cevent.cpp
+	"CEvent.h"
+
+1493762897 c:\users\botpc\desktop\workspace\github\wproject\cevent.h
+	<SDL.h>
+
+1493763819 c:\users\botpc\desktop\workspace\github\wproject\locale\localeen.h
+

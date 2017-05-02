@@ -5,9 +5,12 @@
 #include <ctime>
 #include <cstdio>
 
-#include "define.h"
+#include "locale/localeEN.h"
 
-class CApp {
+#include "define.h"
+#include "CEvent.h"
+
+class CApp : CEvent {
     public:
         bool running;
 
@@ -15,6 +18,10 @@ class CApp {
         ~CApp();
 
         int execute();
+
+        //------Events------
+
+        void OnKeyDown(SDL_Keycode sym);
 };
 
 #endif // _CAPP_H_
