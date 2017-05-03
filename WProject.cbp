@@ -46,6 +46,8 @@
 		<Unit filename="KeyboardListener.h" />
 		<Unit filename="MouseListener.cpp" />
 		<Unit filename="MouseListener.h" />
+		<Unit filename="Settings.cpp" />
+		<Unit filename="Settings.h" />
 		<Unit filename="UserDefinedListener.cpp" />
 		<Unit filename="UserDefinedListener.h" />
 		<Unit filename="WindowListener.cpp" />

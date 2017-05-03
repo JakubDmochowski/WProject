@@ -13,12 +13,19 @@ CApp::~CApp() {
 int CApp::execute() {
     SDL_Init( SDL_INIT_EVERYTHING );
 
-    SDL_Window *screen = SDL_CreateWindow(TXT_TITLE,
-                          SDL_WINDOWPOS_UNDEFINED,
-                          SDL_WINDOWPOS_UNDEFINED,
-                          Settings::settings.getScreenWidth(), Settings::settings.getScreenHeight(),
-                          SDL_WINDOW_OPENGL);
-
+    if(!Settings::settings.getFullscreen()) {
+        SDL_Window *screen = SDL_CreateWindow(TXT_TITLE,
+                              SDL_WINDOWPOS_UNDEFINED,
+                              SDL_WINDOWPOS_UNDEFINED,
+                              Settings::settings.getScreenWidth(), Settings::settings.getScreenHeight(),
+                              SDL_WINDOW_OPENGL);
+    } else {
+        SDL_Window *screen = SDL_CreateWindow(TXT_TITLE,
+                              SDL_WINDOWPOS_UNDEFINED,
+                              SDL_WINDOWPOS_UNDEFINED,
+                              Settings::settings.getScreenWidth(), Settings::settings.getScreenHeight(),
+                              SDL_WINDOW_OPENGL | SDL_WINDOW_FULLSCREEN);
+    }
 
     while(running) {
         CEvent::eventHandler.HandleEvents();
