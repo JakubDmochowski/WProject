@@ -16,7 +16,7 @@ int CApp::execute() {
     SDL_Window *screen = SDL_CreateWindow(TXT_TITLE,
                           SDL_WINDOWPOS_UNDEFINED,
                           SDL_WINDOWPOS_UNDEFINED,
-                          640, 480,
+                          Settings::settings.getScreenWidth(), Settings::settings.getScreenHeight(),
                           SDL_WINDOW_OPENGL);
 
     while(running) {

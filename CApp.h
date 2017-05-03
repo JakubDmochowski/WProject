@@ -8,6 +8,7 @@
 #include "locale/localeEN.h"
 
 #include "define.h"
+#include "Settings.h"
 #include "CEvent.h"
 
 class CApp : CEvent {
