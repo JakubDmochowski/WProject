@@ -3,14 +3,14 @@
 
 CApp::CApp() {
     running = true;
+
+    CEvent eventHandler;
 }
 
 CApp::~CApp() {
 }
 
 int CApp::execute() {
-    SDL_Event Event;
-
     SDL_Init( SDL_INIT_EVERYTHING );
 
     SDL_Window *screen = SDL_CreateWindow(TXT_TITLE,
@@ -19,10 +19,9 @@ int CApp::execute() {
                           Settings::settings.getScreenWidth(), Settings::settings.getScreenHeight(),
                           SDL_WINDOW_OPENGL);
 
+
     while(running) {
-        while(SDL_PollEvent(&Event)) {
-            OnEvent(&Event);
-        }
+        CEvent::eventHandler.HandleEvents();
     }
 
     SDL_Quit();
@@ -32,6 +31,10 @@ int CApp::execute() {
 
 void CApp::OnKeyDown(SDL_Keycode sym) {
     if(sym == SDLK_ESCAPE) running = false;
+}
+
+void CApp::OnExit() {
+    running = false;
 }
 
 int main() {
