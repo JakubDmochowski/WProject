@@ -38,7 +38,20 @@
 		</Compiler>
 		<Unit filename="CApp.cpp" />
 		<Unit filename="CApp.h" />
+		<Unit filename="CEvent.cpp" />
+		<Unit filename="CEvent.h" />
+		<Unit filename="JoystickListener.cpp" />
+		<Unit filename="JoystickListener.h" />
+		<Unit filename="KeyboardListener.cpp" />
+		<Unit filename="KeyboardListener.h" />
+		<Unit filename="MouseListener.cpp" />
+		<Unit filename="MouseListener.h" />
+		<Unit filename="UserDefinedListener.cpp" />
+		<Unit filename="UserDefinedListener.h" />
+		<Unit filename="WindowListener.cpp" />
+		<Unit filename="WindowListener.h" />
 		<Unit filename="define.h" />
+		<Unit filename="locale/localeEN.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

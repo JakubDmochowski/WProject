@@ -11,7 +11,7 @@
 #include "Settings.h"
 #include "CEvent.h"
 
-class CApp : CEvent {
+class CApp : KeyboardListener, WindowListener {
     public:
         bool running;
 
@@ -23,6 +23,8 @@ class CApp : CEvent {
         //------Events------
 
         void OnKeyDown(SDL_Keycode sym);
+
+        void OnExit();
 };
 
 #endif // _CAPP_H_
