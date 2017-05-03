@@ -344,31 +344,3 @@
 
 1493763819 c:\users\botpc\desktop\workspace\github\wproject\locale\localeen.h
 
-1493810787 source:c:\users\user\desktop\workspace\wproject\capp.cpp
-	"CApp.h"
-
-1493809330 c:\users\user\desktop\workspace\wproject\capp.h
-	<SDL.h>
-	<ctime>
-	<cstdio>
-	"locale/localeEN.h"
-	"define.h"
-	"Settings.h"
-	"CEvent.h"
-
-1493764537 c:\users\user\desktop\workspace\wproject\locale\localeen.h
-
-1493809519 c:\users\user\desktop\workspace\wproject\define.h
-
-1493764537 c:\users\user\desktop\workspace\wproject\cevent.h
-	<SDL.h>
-
-1493764537 source:c:\users\user\desktop\workspace\wproject\cevent.cpp
-	"CEvent.h"
-
-1493811638 c:\users\user\desktop\workspace\wproject\settings.h
-	<cstdio>
-
-1493811714 source:c:\users\user\desktop\workspace\wproject\settings.cpp
-	"Settings.h"
-
