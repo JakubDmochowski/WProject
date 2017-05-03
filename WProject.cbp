@@ -38,7 +38,12 @@
 		</Compiler>
 		<Unit filename="CApp.cpp" />
 		<Unit filename="CApp.h" />
+		<Unit filename="CEvent.cpp" />
+		<Unit filename="CEvent.h" />
+		<Unit filename="Settings.cpp" />
+		<Unit filename="Settings.h" />
 		<Unit filename="define.h" />
+		<Unit filename="locale/localeEN.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
