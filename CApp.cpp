@@ -11,24 +11,31 @@ CApp::~CApp() {
 }
 
 int CApp::execute() {
-    SDL_Init( SDL_INIT_EVERYTHING );
-
-    if(!Settings::settings.getFullscreen()) {
-        SDL_Window *screen = SDL_CreateWindow(TXT_TITLE,
-                              SDL_WINDOWPOS_UNDEFINED,
-                              SDL_WINDOWPOS_UNDEFINED,
-                              Settings::settings.getScreenWidth(), Settings::settings.getScreenHeight(),
-                              SDL_WINDOW_OPENGL);
-    } else {
-        SDL_Window *screen = SDL_CreateWindow(TXT_TITLE,
-                              SDL_WINDOWPOS_UNDEFINED,
-                              SDL_WINDOWPOS_UNDEFINED,
-                              Settings::settings.getScreenWidth(), Settings::settings.getScreenHeight(),
-                              SDL_WINDOW_OPENGL | SDL_WINDOW_FULLSCREEN);
-    }
+    if(!initiate()) return 1;
 
     while(running) {
         CEvent::eventHandler.HandleEvents();
+
+        // Example code
+
+        static double current = 0.0;
+        static bool change = true;
+        if(change) {
+            current += 0.001;
+            if(current >= 1.0) {
+                change = false;
+            }
+        } else {
+            current -= 0.001;
+            if(current <= 0.0) {
+                change = true;
+            }
+        }
+        glClearColor(current, current, current, 1.0);
+        glClear(GL_COLOR_BUFFER_BIT);
+        SDL_GL_SwapWindow(window);
+
+        // /Example code
     }
 
     SDL_Quit();

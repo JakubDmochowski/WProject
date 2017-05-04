@@ -323,18 +323,21 @@
 	"begin_code.h"
 	"close_code.h"
 
-1493811719 source:c:\users\botpc\desktop\workspace\github\wproject\capp.cpp
+1493934736 source:c:\users\botpc\desktop\workspace\github\wproject\capp.cpp
 	"CApp.h"
 
-1493811823 c:\users\botpc\desktop\workspace\github\wproject\capp.h
+1493935717 c:\users\botpc\desktop\workspace\github\wproject\capp.h
 	<SDL.h>
 	<ctime>
 	<cstdio>
+	<gl/gl.h>
+	<gl/glu.h>
 	"locale/localeEN.h"
 	"define.h"
+	"Settings.h"
 	"CEvent.h"
 
-1493763824 c:\users\botpc\desktop\workspace\github\wproject\define.h
+1493813273 c:\users\botpc\desktop\workspace\github\wproject\define.h
 
 1493813273 source:c:\users\botpc\desktop\workspace\github\wproject\cevent.cpp
 	"CEvent.h"
@@ -346,7 +349,7 @@
 	"JoystickListener.h"
 	"UserDefinedListener.h"
 
-1493763819 c:\users\botpc\desktop\workspace\github\wproject\locale\localeen.h
+1493813273 c:\users\botpc\desktop\workspace\github\wproject\locale\localeen.h
 
 1493813273 c:\users\botpc\desktop\workspace\github\wproject\keyboardlistener.h
 	<SDL.h>
@@ -388,4 +391,7 @@
 
 1493813273 c:\users\botpc\desktop\workspace\github\wproject\settings.h
 	<cstdio>
+
+1493935373 source:c:\users\botpc\desktop\workspace\github\wproject\capp_initialization.cpp
+	"CApp.h"
 

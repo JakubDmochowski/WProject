@@ -14,9 +14,14 @@
 				<Compiler>
 					<Add option="-std=c++11" />
 					<Add option="-g" />
+					<Add option="-DGLEW_STATIC" />
 				</Compiler>
 				<Linker>
-					<Add option="-lmingw32 -lSDL2main -lSDL2" />
+					<Add library="mingw32" />
+					<Add library="SDL2main" />
+					<Add library="SDL2" />
+					<Add library="opengl32" />
+					<Add library="glu32" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -38,6 +43,7 @@
 		</Compiler>
 		<Unit filename="CApp.cpp" />
 		<Unit filename="CApp.h" />
+		<Unit filename="CApp_Initialization.cpp" />
 		<Unit filename="CEvent.cpp" />
 		<Unit filename="CEvent.h" />
 		<Unit filename="JoystickListener.cpp" />

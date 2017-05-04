@@ -4,6 +4,8 @@
 #include <SDL.h>
 #include <ctime>
 #include <cstdio>
+#include <gl/gl.h>
+#include <gl/glu.h>
 
 #include "locale/localeEN.h"
 
@@ -15,10 +17,15 @@ class CApp : KeyboardListener, WindowListener {
     public:
         bool running;
 
+        SDL_Window* window;
+        SDL_GLContext context;
+
         CApp();
         ~CApp();
 
         int execute();
+
+        bool initiate();
 
         //------Events------
 
