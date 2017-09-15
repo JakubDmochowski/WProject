@@ -6,8 +6,7 @@
 
 using namespace std;
 
-class KeyboardListener {
-    public:
+struct KeyboardListener {
 
         static vector<KeyboardListener*> keyboardListeners;
 

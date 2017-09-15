@@ -6,8 +6,7 @@
 
 using namespace std;
 
-class WindowListener {
-    public:
+struct WindowListener {
 
         static vector<WindowListener*> windowListeners;
 
@@ -27,5 +26,5 @@ class WindowListener {
         virtual void OnExit();
 };
 
-#endif // _KEYLISTEN_H_
+#endif // _WINDOWLISTEN_H_
 

@@ -6,8 +6,7 @@
 
 using namespace std;
 
-class UserDefinedListener {
-    public:
+struct UserDefinedListener {
 
         static vector<UserDefinedListener*> userDefinedListeners;
 
@@ -17,4 +16,4 @@ class UserDefinedListener {
         virtual void OnUser(Uint8 type, int code, void* data1, void* data2);
 };
 
-#endif // _KEYLISTEN_H_
+#endif // _USERLISTEN_H_

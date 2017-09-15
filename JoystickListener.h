@@ -6,8 +6,7 @@
 
 using namespace std;
 
-class JoystickListener {
-    public:
+struct JoystickListener {
 
         static vector<JoystickListener*> joystickListeners;
 
@@ -25,5 +24,5 @@ class JoystickListener {
         virtual void OnJoyBall(Uint8 which, Uint8 ball, Sint16 xrel, Sint16 yrel);
 };
 
-#endif // _KEYLISTEN_H_
+#endif // _JOYLISTEN_H_
 

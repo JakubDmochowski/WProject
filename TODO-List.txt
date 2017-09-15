@@ -1,0 +1,14 @@
+Legend:
+[] - Feature
+{} - Bugfix
+!! - Critical Importance
+!  - High Importance
++  - Averege Importance
+*  - Low Importance
+== - Wide Subject
+
+-[!!] Project Architecture
+-[==] Entity mechanics
+-[==] Map
+	[+]Surface Class
+-[==] Physics

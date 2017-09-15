@@ -9,19 +9,20 @@
 
 #include "locale/localeEN.h"
 
+#include "FPS.h"
+#include "Timer.h"
 #include "define.h"
 #include "Settings.h"
 #include "CEvent.h"
+#include "Window.h"
 
-class CApp : KeyboardListener, WindowListener {
-    public:
+struct CApp : KeyboardListener, WindowListener {
         bool running;
 
-        SDL_Window* window;
+        //SDL_Window* window;
         SDL_GLContext context;
 
         CApp();
-        ~CApp();
 
         int execute();
 
@@ -31,7 +32,7 @@ class CApp : KeyboardListener, WindowListener {
 
         void OnKeyDown(SDL_Keycode sym);
 
-        void OnExit();
+        void quit();
 };
 
 #endif // _CAPP_H_

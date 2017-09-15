@@ -2,6 +2,7 @@
 #define _SETTINGS_H_
 
 #include <cstdio>
+#include "FPS.h"
 
 class Settings {
     Settings();

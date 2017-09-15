@@ -6,9 +6,7 @@
 
 using namespace std;
 
-class MouseListener {
-    public:
-
+struct MouseListener {
         static vector<MouseListener*> mouseListeners;
 
         MouseListener();

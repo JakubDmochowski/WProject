@@ -10,11 +10,12 @@
 				<Option output="bin/Debug/WProject" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
-				<Option compiler="gcc" />
+				<Option compiler="tdm-gcc-32_compiler" />
+				<Option projectCompilerOptionsRelation="-1" />
+				<Option projectIncludeDirsRelation="-1" />
+				<Option projectLibDirsRelation="-1" />
 				<Compiler>
 					<Add option="-std=c++11" />
-					<Add option="-g" />
-					<Add option="-DGLEW_STATIC" />
 				</Compiler>
 				<Linker>
 					<Add library="mingw32" />
@@ -23,6 +24,14 @@
 					<Add library="opengl32" />
 					<Add library="glu32" />
 				</Linker>
+				<MakeCommands>
+					<Build command="" />
+					<CompileFile command="" />
+					<Clean command="" />
+					<DistClean command="" />
+					<AskRebuildNeeded command="" />
+					<SilentBuild command=" &gt; $(CMD_NULL)" />
+				</MakeCommands>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/WProject" prefix_auto="1" extension_auto="1" />
@@ -46,6 +55,8 @@
 		<Unit filename="CApp_Initialization.cpp" />
 		<Unit filename="CEvent.cpp" />
 		<Unit filename="CEvent.h" />
+		<Unit filename="FPS.cpp" />
+		<Unit filename="FPS.h" />
 		<Unit filename="JoystickListener.cpp" />
 		<Unit filename="JoystickListener.h" />
 		<Unit filename="KeyboardListener.cpp" />
@@ -54,8 +65,12 @@
 		<Unit filename="MouseListener.h" />
 		<Unit filename="Settings.cpp" />
 		<Unit filename="Settings.h" />
+		<Unit filename="Timer.cpp" />
+		<Unit filename="Timer.h" />
 		<Unit filename="UserDefinedListener.cpp" />
 		<Unit filename="UserDefinedListener.h" />
+		<Unit filename="Window.cpp" />
+		<Unit filename="Window.h" />
 		<Unit filename="WindowListener.cpp" />
 		<Unit filename="WindowListener.h" />
 		<Unit filename="define.h" />
