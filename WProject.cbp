@@ -16,6 +16,7 @@
 				<Option projectLibDirsRelation="-1" />
 				<Compiler>
 					<Add option="-std=c++11" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add library="mingw32" />
@@ -40,6 +41,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -55,6 +57,9 @@
 		<Unit filename="CApp_Initialization.cpp" />
 		<Unit filename="CEvent.cpp" />
 		<Unit filename="CEvent.h" />
+		<Unit filename="CFPS.h" />
+		<Unit filename="CRender.cpp" />
+		<Unit filename="CRender.h" />
 		<Unit filename="FPS.cpp" />
 		<Unit filename="FPS.h" />
 		<Unit filename="JoystickListener.cpp" />
@@ -65,6 +70,8 @@
 		<Unit filename="MouseListener.h" />
 		<Unit filename="Settings.cpp" />
 		<Unit filename="Settings.h" />
+		<Unit filename="Texture.cpp" />
+		<Unit filename="Texture.h" />
 		<Unit filename="Timer.cpp" />
 		<Unit filename="Timer.h" />
 		<Unit filename="UserDefinedListener.cpp" />

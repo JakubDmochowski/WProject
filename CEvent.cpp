@@ -6,10 +6,9 @@ CEvent::CEvent() {
 }
 
 CEvent::~CEvent() {
-    //Do nothing
 }
 
-void CEvent::HandleEvents() {
+void CEvent::handleEvents() {
     SDL_Event Event;
     while(SDL_PollEvent(&Event)) {
         OnEvent(&Event);

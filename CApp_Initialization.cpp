@@ -32,6 +32,8 @@ bool CApp::initiate() {
     SDL_GL_SetAttribute( SDL_GL_DOUBLEBUFFER, 1 );
     context = SDL_GL_CreateContext( Window::window );
 
+    CRender::renderer = SDL_CreateRenderer(Window::window, -1, SDL_RENDERER_ACCELERATED);
+
     Timer::GameTimerControl.start();
     return true;
 }

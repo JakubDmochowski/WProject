@@ -13,9 +13,9 @@ class CEvent {
 
         static CEvent eventHandler;
 
-        void HandleEvents();
+        void handleEvents();
 
-        CEvent();
+        explicit CEvent();
         virtual ~CEvent();
 
     private:

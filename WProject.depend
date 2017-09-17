@@ -395,10 +395,10 @@
 1493935373 source:c:\users\botpc\desktop\workspace\github\wproject\capp_initialization.cpp
 	"CApp.h"
 
-1505229972 source:c:\users\user\desktop\workspace\wproject\cevent.cpp
+1505672055 source:c:\users\user\desktop\workspace\wproject\cevent.cpp
 	"CEvent.h"
 
-1493812859 c:\users\user\desktop\workspace\wproject\cevent.h
+1505672061 c:\users\user\desktop\workspace\wproject\cevent.h
 	"KeyboardListener.h"
 	"MouseListener.h"
 	"WindowListener.h"
@@ -425,19 +425,19 @@
 	<SDL.h>
 	<vector>
 
-1505569854 source:c:\users\user\desktop\workspace\wproject\settings.cpp
+1505656019 source:c:\users\user\desktop\workspace\wproject\settings.cpp
 	"Settings.h"
 
 1505655979 c:\users\user\desktop\workspace\wproject\settings.h
 	<cstdio>
 	"FPS.h"
 
-1505570109 source:c:\users\user\desktop\workspace\wproject\capp.cpp
+1505676928 source:c:\users\user\desktop\workspace\wproject\capp.cpp
 	"CApp.h"
 	<iostream>
 	<cstdlib>
 
-1505517640 c:\users\user\desktop\workspace\wproject\capp.h
+1505672787 c:\users\user\desktop\workspace\wproject\capp.h
 	<SDL.h>
 	<ctime>
 	<cstdio>
@@ -450,6 +450,8 @@
 	"Settings.h"
 	"CEvent.h"
 	"Window.h"
+	"Texture.h"
+	"CRender.h"
 
 1493812859 c:\users\user\desktop\workspace\wproject\locale\localeen.h
 
@@ -470,7 +472,7 @@
 1493812859 source:c:\users\user\desktop\workspace\wproject\windowlistener.cpp
 	"WindowListener.h"
 
-1505514485 source:c:\users\user\desktop\workspace\wproject\capp_initialization.cpp
+1505675409 source:c:\users\user\desktop\workspace\wproject\capp_initialization.cpp
 	"CApp.h"
 
 1505514485 source:c:\users\user\desktop\workspace\wproject\timer.cpp
@@ -489,13 +491,31 @@
 	<SDL.h>
 	<cstdio>
 
-1505514485 source:c:\users\user\desktop\workspace\wproject\fps.cpp
+1505655912 source:c:\users\user\desktop\workspace\wproject\fps.cpp
 	"FPS.h"
-	<iostream>
 
-1505515947 c:\users\user\desktop\workspace\wproject\window.h
+1505675381 c:\users\user\desktop\workspace\wproject\window.h
 	<SDL.h>
 
-1505514485 source:c:\users\user\desktop\workspace\wproject\window.cpp
+1505675385 source:c:\users\user\desktop\workspace\wproject\window.cpp
 	"Window.h"
+
+1505677026 source:c:\users\user\desktop\workspace\wproject\crender.cpp
+	"CRender.h"
+
+1505676697 c:\users\user\desktop\workspace\wproject\crender.h
+	<SDL.h>
+	<vector>
+	<algorithm>
+	"CRender.h"
+	"Window.h"
+	"Texture.h"
+
+1505675425 source:c:\users\user\desktop\workspace\wproject\texture.cpp
+	"Texture.h"
+	"CRender.h"
+
+1505671488 c:\users\user\desktop\workspace\wproject\texture.h
+	<SDL.h>
+	<cstdio>
 

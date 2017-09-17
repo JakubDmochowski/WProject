@@ -15,6 +15,8 @@
 #include "Settings.h"
 #include "CEvent.h"
 #include "Window.h"
+#include "Texture.h"
+#include "CRender.h"
 
 struct CApp : KeyboardListener, WindowListener {
         bool running;
@@ -32,7 +34,7 @@ struct CApp : KeyboardListener, WindowListener {
 
         void OnKeyDown(SDL_Keycode sym);
 
-        void quit();
+        void OnExit();
 };
 
 #endif // _CAPP_H_
