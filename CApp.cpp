@@ -10,10 +10,7 @@ CApp::CApp() {
     CEvent eventHandler;
 }
 
-int index = 0;
-
-//example function
-Uint32 workInProgress(Uint32 interval, void* param) {
+Uint32 fpsCounter(Uint32 interval, void* param) {
     cout << Timer::GameTimerControl.getTime() << endl;
     printf("Current FPS: %d\n", FPS::FPSControl.getFPS());
     return interval;
@@ -44,40 +41,21 @@ Uint32 render(Uint32 interval, void *param) {
     SDL_RenderCopy(renderer, splashTexture, NULL, NULL);
     SDL_RenderPresent(renderer);
     //----------------------------render--------------------------------
-    int cap = FPS::FPSControl.getFPSCap();
+    int cap = Settings::settings.getFPSCap();
     int fps = FPS::FPSControl.getFPS();
-    cout << "Rendered: " << ++index << endl;
+    //cout << "Rendered: " << ++index << endl;
     return 1000 / (fps || cap ? (fps && cap ? (fps < cap ? fps : cap) : (fps ? fps : cap)) : 1);
 }
 
 int CApp::execute() {
     if(!initiate()) return 1;
-    SDL_TimerID WIP = SDL_AddTimer(1000, workInProgress, nullptr); /// for debug purposes
+    int a[10] = {1,2,3,4,5,6,7,8,9,8};
+    SDL_TimerID WIP = SDL_AddTimer(1000, fpsCounter, nullptr); /// for debug purposes
     SDL_TimerID onRender = SDL_AddTimer(0, render, nullptr);
 
     while(running) {
         CEvent::eventHandler.HandleEvents();
         FPS::FPSControl.onLoop();
-
-                // Example code
-        /*
-        static double current = 0.0;
-        static bool change = true;
-        if(change) {
-            current += 0.001;
-            if(current >= 1.0) {
-                change = false;
-            }
-        } else {
-            current -= 0.001;
-            if(current <= 0.0) {
-                change = true;
-            }
-        }
-        glClearColor(current, current, current, 1.0);
-        glClear(GL_COLOR_BUFFER_BIT);
-        SDL_GL_SwapWindow(window);SDL_RenderClear(renderer);*/
-        // Example code
     }
     SDL_DestroyWindow(Window::window);
     SDL_Quit();

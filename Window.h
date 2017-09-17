@@ -6,4 +6,5 @@
 struct Window {
     static SDL_Window* window;
 };
+
 #endif // _WINDOW_

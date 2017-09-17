@@ -9,6 +9,7 @@ Settings::Settings() {
     int fs = 0;
     fscanf(file, "Fullscreen: %d\n", &fs);
     fullscreen = (fs == 1);
+    fscanf(file, "FPSCap: %d\n", &FPSCap);
     fclose(file);
 }
 
@@ -24,6 +25,10 @@ bool Settings::getFullscreen() const {
     return fullscreen;
 }
 
+int Settings::getFPSCap() const {
+    return FPSCap;
+}
+
 void Settings::setFullscreen(bool fc) {
     fullscreen = fc;
 }
@@ -34,4 +39,8 @@ void Settings::setScreenHeight(int height) {
 
 void Settings::setScreenWidth(int width) {
     screen_width = width;
+}
+
+void Settings::setFPSCap(int cap) {
+    FPSCap = cap;
 }

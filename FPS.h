@@ -19,8 +19,6 @@ class FPS {
 
         int     ticks;
 
-        int     FPSCap;
-
     public:
         FPS();
 
@@ -31,9 +29,6 @@ class FPS {
 
         double  getSpeedFactor() const;
         int     getTickFactor() const;
-
-        void    setFPSCap(int cap);
-        int     getFPSCap() const;
 };
 
 #endif //_FPS_H_
