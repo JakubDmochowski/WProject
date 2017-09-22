@@ -1,16 +1,14 @@
 #pragma once
 #include <SDL.h>
 #include <vector>
-#include <map>
 #include <algorithm>
 #include "CRender.h"
 #include "Window.h"
 #include "Texture.h"
-#include "Renderable.h"
 
 class CRender {
 
-    std::map<Texture*, std::vector<Renderable*>> textures;
+    std::vector<Texture*> textures;
 
     public:
         static SDL_Renderer* renderer;
@@ -25,5 +23,5 @@ class CRender {
 
         SDL_Renderer* getRenderer() const;
     private:
-        void renderTexture(Texture* toRender, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* rotateCenter) const;
+        void renderTexture(Texture* toRender, SDL_Rect* srcrect, SDL_Rect* dstrect) const;
 };

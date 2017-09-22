@@ -323,33 +323,26 @@
 	"begin_code.h"
 	"close_code.h"
 
-1506089436 source:c:\users\botpc\desktop\workspace\github\wproject\capp.cpp
+1493934736 source:c:\users\botpc\desktop\workspace\github\wproject\capp.cpp
 	"CApp.h"
-	<iostream>
-	<cstdlib>
 
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\capp.h
+1493935717 c:\users\botpc\desktop\workspace\github\wproject\capp.h
 	<SDL.h>
 	<ctime>
 	<cstdio>
 	<gl/gl.h>
 	<gl/glu.h>
 	"locale/localeEN.h"
-	"FPS.h"
-	"Timer.h"
 	"define.h"
 	"Settings.h"
 	"CEvent.h"
-	"Window.h"
-	"Texture.h"
-	"CRender.h"
 
 1493813273 c:\users\botpc\desktop\workspace\github\wproject\define.h
 
-1505679078 source:c:\users\botpc\desktop\workspace\github\wproject\cevent.cpp
+1493813273 source:c:\users\botpc\desktop\workspace\github\wproject\cevent.cpp
 	"CEvent.h"
 
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\cevent.h
+1493813273 c:\users\botpc\desktop\workspace\github\wproject\cevent.h
 	"KeyboardListener.h"
 	"MouseListener.h"
 	"WindowListener.h"
@@ -358,23 +351,23 @@
 
 1493813273 c:\users\botpc\desktop\workspace\github\wproject\locale\localeen.h
 
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\keyboardlistener.h
+1493813273 c:\users\botpc\desktop\workspace\github\wproject\keyboardlistener.h
 	<SDL.h>
 	<vector>
 
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\mouselistener.h
+1493813273 c:\users\botpc\desktop\workspace\github\wproject\mouselistener.h
 	<SDL.h>
 	<vector>
 
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\windowlistener.h
+1493813273 c:\users\botpc\desktop\workspace\github\wproject\windowlistener.h
 	<SDL.h>
 	<vector>
 
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\joysticklistener.h
+1493813273 c:\users\botpc\desktop\workspace\github\wproject\joysticklistener.h
 	<SDL.h>
 	<vector>
 
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\userdefinedlistener.h
+1493813273 c:\users\botpc\desktop\workspace\github\wproject\userdefinedlistener.h
 	<SDL.h>
 	<vector>
 
@@ -393,14 +386,13 @@
 1493813273 source:c:\users\botpc\desktop\workspace\github\wproject\windowlistener.cpp
 	"WindowListener.h"
 
-1505679078 source:c:\users\botpc\desktop\workspace\github\wproject\settings.cpp
+1493813273 source:c:\users\botpc\desktop\workspace\github\wproject\settings.cpp
 	"Settings.h"
 
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\settings.h
+1493813273 c:\users\botpc\desktop\workspace\github\wproject\settings.h
 	<cstdio>
-	"FPS.h"
 
-1505679078 source:c:\users\botpc\desktop\workspace\github\wproject\capp_initialization.cpp
+1493935373 source:c:\users\botpc\desktop\workspace\github\wproject\capp_initialization.cpp
 	"CApp.h"
 
 1505672055 source:c:\users\user\desktop\workspace\wproject\cevent.cpp
@@ -526,50 +518,4 @@
 1505671488 c:\users\user\desktop\workspace\wproject\texture.h
 	<SDL.h>
 	<cstdio>
-
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\fps.h
-	<SDL.h>
-	<cstdio>
-
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\timer.h
-	<SDL.h>
-
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\window.h
-	<SDL.h>
-
-1506087705 c:\users\botpc\desktop\workspace\github\wproject\texture.h
-	<SDL.h>
-	<cstdio>
-
-1506088380 c:\users\botpc\desktop\workspace\github\wproject\crender.h
-	<SDL.h>
-	<vector>
-	<map>
-	<algorithm>
-	"CRender.h"
-	"Window.h"
-	"Texture.h"
-	"Renderable.h"
-
-1505679078 source:c:\users\botpc\desktop\workspace\github\wproject\fps.cpp
-	"FPS.h"
-
-1505679078 source:c:\users\botpc\desktop\workspace\github\wproject\texture.cpp
-	"Texture.h"
-	"CRender.h"
-
-1505679078 source:c:\users\botpc\desktop\workspace\github\wproject\timer.cpp
-	"Timer.h"
-
-1505679078 source:c:\users\botpc\desktop\workspace\github\wproject\window.cpp
-	"Window.h"
-
-1506088593 c:\users\botpc\desktop\workspace\github\wproject\renderable.h
-	<SDL.h>
-
-1506089305 source:c:\users\botpc\desktop\workspace\github\wproject\crender.cpp
-	"CRender.h"
-
-1506089255 source:c:\users\botpc\desktop\workspace\github\wproject\renderable.cpp
-	"Renderable.h"
 
