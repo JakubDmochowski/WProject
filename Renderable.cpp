@@ -3,7 +3,7 @@
 Renderable::Renderable() {
     src = NULL;
     dst = NULL;
-    angle = 50;
+    angle = 0;
     rotateCenter = NULL;
 }
 

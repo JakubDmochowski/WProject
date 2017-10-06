@@ -12,8 +12,9 @@ CRender::~CRender() {
 void CRender::handleRender() const {
     SDL_RenderClear(renderer);
     for(auto const& i : textures) {
-        for(auto const& j : i.second)
-        renderTexture(i.first, j->src, j->dst, j->angle, j->rotateCenter);
+        for(auto const& j : i.second) {
+            renderTexture(i.first, j->src, j->dst, j->angle, j->rotateCenter);
+        }
     }
     SDL_RenderPresent(renderer);
 }
