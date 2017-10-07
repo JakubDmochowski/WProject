@@ -1,6 +1,6 @@
 #pragma once
 #include <SDL.h>
-#include <vector>
+#include <list>
 #include <map>
 #include <algorithm>
 #include "CRender.h"
@@ -10,20 +10,21 @@
 
 class CRender {
 
-    std::map<Texture*, std::vector<Renderable*>> textures;
+    static std::map<Texture*, std::list<Renderable*>> textures;
+    static std::map<std::string, Texture*> textureNames;
 
     public:
         static SDL_Renderer* renderer;
-        static CRender renderHandler;
 
-        void handleRender() const;
+        static void handleRender();
 
         explicit CRender();
         virtual ~CRender();
 
-        void addTexture(Texture* newTexture);
+        static void addTexture(Texture* newTexture, const std::string textureName);
+        static void addRenderableToTexture(Renderable* renderable, const std::string texture);
 
         SDL_Renderer* getRenderer() const;
     private:
-        void renderTexture(Texture* toRender, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* rotateCenter) const;
+        static void renderTexture(Texture* toRender, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* rotateCenter);
 };

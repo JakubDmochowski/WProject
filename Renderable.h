@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SDL.h>
+#include <string>
 
 class Renderable {
     //Temporary - to be expanded upon to achieve desired functionality
@@ -10,6 +11,6 @@ class Renderable {
         double angle;
         SDL_Point* rotateCenter;
 
-        Renderable();
+        Renderable(const std::string textureName = "default.bmp");
         ~Renderable();
 };

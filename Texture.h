@@ -11,6 +11,6 @@ class Texture {
         explicit Texture();
         virtual ~Texture();
 
-        void  loadTexture(char* filePath);
+        bool  loadTexture(const char* filePath);
         SDL_Texture* getTexture() const;
 };

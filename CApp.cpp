@@ -21,18 +21,27 @@ int CApp::execute() {
     int a[10] = {1,2,3,4,5,6,7,8,9,8};
     SDL_TimerID WIP = SDL_AddTimer(1000, fpsCounter, nullptr); /// for debug purposes
 
-    for(int i = 0; i < 60 ;i++) {
-        Texture temp1;
-        temp1.loadTexture("./gfx/Helloworld.bmp");
-        CRender::renderHandler.addTexture(&temp1);
-        Texture temp2;
-        temp2.loadTexture("./gfx/Background.bmp");
-        CRender::renderHandler.addTexture(&temp2);
-    }
+    // CRAP CODE
+    Renderable* costam = new Renderable();
+    costam->dst = new SDL_Rect();
+    costam->dst->w = 100;
+    costam->dst->h = 100;
+
+    new Renderable("asdf.bmp");
+    // --CRAP CODE
+
     while(running) {
         CEvent::eventHandler.handleEvents();
         FPS::FPSControl.onLoop();
-        CRender::renderHandler.handleRender();
+        CRender::handleRender();
+
+        // CRAP CODE
+        costam->dst->x++;
+        if(costam->dst->x > Settings::settings.getScreenWidth()) {
+            costam->dst->x = -100;
+            costam->dst->y++;
+        }
+        // --CRAP CODE
     }
     SDL_DestroyWindow(Window::window);
     SDL_Quit();
