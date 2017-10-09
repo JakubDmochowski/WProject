@@ -16,7 +16,7 @@
 				<Option projectIncludeDirsRelation="-1" />
 				<Option projectLibDirsRelation="-1" />
 				<Compiler>
-					<Add option="-std=c++11" />
+					<Add option="-std=c++14" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
@@ -69,6 +69,7 @@
 		<Unit filename="CRender.h">
 			<Option virtualFolder="Rendering/" />
 		</Unit>
+		<Unit filename="Entity.h" />
 		<Unit filename="FPS.cpp" />
 		<Unit filename="FPS.h" />
 		<Unit filename="JoystickListener.cpp">

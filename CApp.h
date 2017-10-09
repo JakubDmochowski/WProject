@@ -17,11 +17,11 @@
 #include "Window.h"
 #include "Texture.h"
 #include "CRender.h"
+#include "Entity.h"
 
 struct CApp : KeyboardListener, WindowListener {
         bool running;
 
-        //SDL_Window* window;
         SDL_GLContext context;
 
         CApp();

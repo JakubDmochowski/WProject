@@ -440,12 +440,12 @@
 	<cstdio>
 	"FPS.h"
 
-1507306461 source:c:\users\user\desktop\workspace\wproject\capp.cpp
+1507583631 source:c:\users\user\desktop\workspace\wproject\capp.cpp
 	"CApp.h"
 	<iostream>
 	<cstdlib>
 
-1507293785 c:\users\user\desktop\workspace\wproject\capp.h
+1507572226 c:\users\user\desktop\workspace\wproject\capp.h
 	<SDL.h>
 	<ctime>
 	<cstdio>
@@ -460,6 +460,7 @@
 	"Window.h"
 	"Texture.h"
 	"CRender.h"
+	"Entity.h"
 
 1493812859 c:\users\user\desktop\workspace\wproject\locale\localeen.h
 
@@ -480,7 +481,7 @@
 1493812859 source:c:\users\user\desktop\workspace\wproject\windowlistener.cpp
 	"WindowListener.h"
 
-1507296578 source:c:\users\user\desktop\workspace\wproject\capp_initialization.cpp
+1507386414 source:c:\users\user\desktop\workspace\wproject\capp_initialization.cpp
 	"CApp.h"
 
 1507296578 source:c:\users\user\desktop\workspace\wproject\timer.cpp
@@ -508,24 +509,25 @@
 1505678956 source:c:\users\user\desktop\workspace\wproject\window.cpp
 	"Window.h"
 
-1507307937 source:c:\users\user\desktop\workspace\wproject\crender.cpp
+1507583419 source:c:\users\user\desktop\workspace\wproject\crender.cpp
 	"CRender.h"
 
-1507301980 c:\users\user\desktop\workspace\wproject\crender.h
+1507583149 c:\users\user\desktop\workspace\wproject\crender.h
 	<SDL.h>
 	<list>
 	<map>
 	<algorithm>
+	<memory>
 	"CRender.h"
 	"Window.h"
 	"Texture.h"
 	"Renderable.h"
 
-1507307050 source:c:\users\user\desktop\workspace\wproject\texture.cpp
+1507386414 source:c:\users\user\desktop\workspace\wproject\texture.cpp
 	"Texture.h"
 	"CRender.h"
 
-1507307008 c:\users\user\desktop\workspace\wproject\texture.h
+1507386414 c:\users\user\desktop\workspace\wproject\texture.h
 	<SDL.h>
 	<cstdio>
 
@@ -575,11 +577,15 @@
 1506089255 source:c:\users\botpc\desktop\workspace\github\wproject\renderable.cpp
 	"Renderable.h"
 
-1507303194 c:\users\user\desktop\workspace\wproject\renderable.h
+1507581879 c:\users\user\desktop\workspace\wproject\renderable.h
 	<SDL.h>
 	<string>
+	<memory>
 
-1507302653 source:c:\users\user\desktop\workspace\wproject\renderable.cpp
+1507583783 source:c:\users\user\desktop\workspace\wproject\renderable.cpp
 	"Renderable.h"
 	"CRender.h"
+
+1507572647 c:\users\user\desktop\workspace\wproject\entity.h
+	<memory>
 

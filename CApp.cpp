@@ -22,19 +22,17 @@ int CApp::execute() {
     SDL_TimerID WIP = SDL_AddTimer(1000, fpsCounter, nullptr); /// for debug purposes
 
     // CRAP CODE
-    Renderable* costam = new Renderable();
+    RenderablePtr costam(new Renderable());
     costam->dst = new SDL_Rect();
     costam->dst->w = 100;
     costam->dst->h = 100;
+    CRender::addRenderableToTexture(costam);
 
-    new Renderable("asdf.bmp");
     // --CRAP CODE
-
     while(running) {
         CEvent::eventHandler.handleEvents();
         FPS::FPSControl.onLoop();
         CRender::handleRender();
-
         // CRAP CODE
         costam->dst->x++;
         if(costam->dst->x > Settings::settings.getScreenWidth()) {

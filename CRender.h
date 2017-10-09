@@ -3,6 +3,7 @@
 #include <list>
 #include <map>
 #include <algorithm>
+#include <memory>
 #include "CRender.h"
 #include "Window.h"
 #include "Texture.h"
@@ -10,7 +11,7 @@
 
 class CRender {
 
-    static std::map<Texture*, std::list<Renderable*>> textures;
+    static std::map<Texture*, std::list<RenderablePtr>> textures;
     static std::map<std::string, Texture*> textureNames;
 
     public:
@@ -22,7 +23,9 @@ class CRender {
         virtual ~CRender();
 
         static void addTexture(Texture* newTexture, const std::string textureName);
-        static void addRenderableToTexture(Renderable* renderable, const std::string texture);
+        static void addRenderableToTexture(RenderablePtr renderable);
+        static void removeTexture(const std::string textureName);
+        static void removeRenderableFromTexture(RenderablePtr);
 
         SDL_Renderer* getRenderer() const;
     private:
