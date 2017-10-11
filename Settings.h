@@ -1,5 +1,4 @@
-#ifndef _SETTINGS_H_
-#define _SETTINGS_H_
+#pragma once
 
 #include <cstdio>
 #include "FPS.h"
@@ -23,5 +22,3 @@ class Settings {
         void setFullscreen(bool fc);
         void setFPSCap(int cap);
 };
-
-#endif // _SETTINGS_H_

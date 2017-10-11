@@ -1,5 +1,4 @@
-#ifndef _KEYLISTEN_H_
-#define _KEYLISTEN_H_
+#pragma once
 
 #include <SDL.h>
 #include <vector>
@@ -17,5 +16,3 @@ struct KeyboardListener {
 
         virtual void OnKeyUp(SDL_Keycode sym);
 };
-
-#endif // _KEYLISTEN_H_

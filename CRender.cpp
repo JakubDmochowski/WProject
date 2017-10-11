@@ -1,8 +1,7 @@
 #include "CRender.h"
 
 SDL_Renderer* CRender::renderer;
-std::map<Texture*, std::list<RenderablePtr>> CRender::textures;
-std::map<std::string, Texture*> CRender::textureNames;
+std::map<std::string, TexturePtr> CRender::textures;
 
 CRender::CRender() {
 }
@@ -10,12 +9,21 @@ CRender::CRender() {
 CRender::~CRender() {
 }
 
-
 void CRender::handleRender() {
     SDL_RenderClear(renderer);
-    for(auto const& i : textures) {
-        for(auto const& j : i.second) {
-            renderTexture(i.first, j->src, j->dst, j->angle, j->rotateCenter);
+    for(auto i = textures.begin(); i != textures.end();) {
+        for(auto j = (*i).second->renderables.begin(); j != (*i).second->renderables.end();) {
+            if(j->use_count() == 1) {
+                j = (*i).second->renderables.erase(j);
+            } else {
+                renderTexture((*i).second, (*j)->src, (*j)->dst, (*j)->angle, (*j)->rotateCenter);
+                ++j;
+            }
+        }
+        if((*i).second->renderables.size() == 0) {
+            i = textures.erase(i);
+        } else {
+            ++i;
         }
     }
     SDL_RenderPresent(renderer);
@@ -25,12 +33,8 @@ SDL_Renderer* CRender::getRenderer() const {
     return renderer;
 }
 
-void CRender::addTexture(Texture* newTexture, const std::string textureName) {
-    /// DELETE THAT
-    std::list<RenderablePtr> tempList;
-    ///
-    textureNames.insert(std::pair<std::string, Texture*>(textureName, newTexture));
-    textures.insert(std::pair<Texture*, std::list<RenderablePtr>>(newTexture, tempList));
+void CRender::addTexture(TexturePtr newTexture, const std::string textureName) {
+    textures.insert(std::pair<std::string, TexturePtr>(textureName, newTexture));
 }
 
 void CRender::addRenderableToTexture(RenderablePtr renderable) {
@@ -38,33 +42,24 @@ void CRender::addRenderableToTexture(RenderablePtr renderable) {
         throw std::runtime_error("CRender::addRenderableToTexture renderablePtr = null");
         return;
     }
-    auto tmpTextureIterator = textureNames.find(renderable->textureName);
-    if(tmpTextureIterator == textureNames.end()) {
-        Texture* tempTexture = new Texture();
-        std::string tmpStr = "./gfx/" + renderable->textureName;
-        if(!tempTexture->loadTexture(tmpStr.c_str())){
-            if((tmpTextureIterator = textureNames.find("default.bmp")) != textureNames.end()) {
-                tempTexture->loadTexture("./gfx/default.bmp");
+    auto tmpTextureIterator = textures.find(renderable->textureName);
+    if(tmpTextureIterator == textures.end()) {
+        TexturePtr tempTexture(new Texture());
+        if(!tempTexture->loadTexture(renderable->textureName.c_str())){
+            if((tmpTextureIterator = textures.find("default.bmp")) != textures.end()) {
+                tempTexture->loadTexture("default.bmp");
                 addTexture(tempTexture, "default.bmp");
-                tmpTextureIterator = textureNames.find("default.bmp");
-            } else {
-                delete tempTexture;
+                tmpTextureIterator = textures.find("default.bmp");
             }
         } else {
             addTexture(tempTexture, renderable->textureName);
-            tmpTextureIterator = textureNames.find(renderable->textureName);
+            tmpTextureIterator = textures.find(renderable->textureName);
         }
     }
-    std::list<RenderablePtr>* tempList = &textures.find(tmpTextureIterator->second)->second;
+    std::list<RenderablePtr>* tempList = &tmpTextureIterator->second->renderables;
     tempList->insert(tempList->end(), renderable);
 }
 
-void CRender::renderTexture(Texture* toRender, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* rotateCenter) {
+void CRender::renderTexture(TexturePtr toRender, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* rotateCenter) {
     SDL_RenderCopyEx(renderer, toRender->getTexture(), srcrect, dstrect, angle, rotateCenter, SDL_FLIP_NONE);
-}
-
-void CRender::removeTexture(const std::string textureName) {
-    auto tmp = textureNames.find(textureName);
-    textures.erase(textures.find(tmp->second));
-    textureNames.erase(tmp);
 }

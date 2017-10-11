@@ -1,4 +1,4 @@
-#ifndef _DEFINE_H_
-#define _DEFINE_H_
+#define lite_debug
+//#define full_debug
 
-#endif // _DEFINE_H_
+//#define showFPS

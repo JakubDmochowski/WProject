@@ -1,5 +1,4 @@
-#ifndef _WINDOWLISTEN_H_
-#define _WINDOWLISTEN_H_
+#pragma once
 
 #include <SDL.h>
 #include <vector>
@@ -25,6 +24,4 @@ struct WindowListener {
 
         virtual void OnExit();
 };
-
-#endif // _WINDOWLISTEN_H_
 

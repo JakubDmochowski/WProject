@@ -1,5 +1,4 @@
-#ifndef _CEVENT_H_
-    #define _CEVENT_H_
+#pragma once
 
 #include "KeyboardListener.h"
 #include "MouseListener.h"
@@ -22,6 +21,4 @@ class CEvent {
 
         virtual void OnEvent(SDL_Event* Event);
 };
-
-#endif
 

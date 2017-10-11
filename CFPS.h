@@ -1,5 +1,4 @@
-#ifndef _FPS_H_
-    #define _FPS_H_
+#pragma once
 
 #include <SDL.h>
 
@@ -29,5 +28,3 @@ class FPS {
         double  GetSpeedFactor() const;
         int     GetTickFactor() const;
 };
-
-#endif

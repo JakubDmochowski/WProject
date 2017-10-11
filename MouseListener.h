@@ -1,5 +1,4 @@
-#ifndef _MOUSELISTEN_H_
-#define _MOUSELISTEN_H_
+#pragma once
 
 #include <SDL.h>
 #include <vector>
@@ -28,5 +27,3 @@ struct MouseListener {
 
         virtual void OnMouseMove(int mX, int mY, int relX, int relY, bool Left, bool Right, bool Middle);
 };
-
-#endif // _MOUSELISTEN_H_

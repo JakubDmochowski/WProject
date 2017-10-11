@@ -1,5 +1,4 @@
-#ifndef _USERLISTEN_H_
-#define _USERLISTEN_H_
+#pragma once
 
 #include <SDL.h>
 #include <vector>
@@ -15,5 +14,3 @@ struct UserDefinedListener {
 
         virtual void OnUser(Uint8 type, int code, void* data1, void* data2);
 };
-
-#endif // _USERLISTEN_H_

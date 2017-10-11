@@ -2,12 +2,21 @@
 #include "CRender.h"
 
 Texture::Texture() {
+    std::list<RenderablePtr> renderables;
 }
 
 Texture::~Texture() {
+    SDL_DestroyTexture(texture);
+
+    #if defined(lite_debug)
+        printf("Destroyed texture: \"./gfx/%s\"\n", textureName);
+    #endif
 }
 
-bool Texture::loadTexture(const char* FilePath) {
+bool Texture::loadTexture(const char* textureName) {
+    std::string tmpStr = "./gfx/";
+    tmpStr.append(textureName);
+    const char* FilePath = tmpStr.c_str();
     SDL_Surface* tempSurf = SDL_LoadBMP(FilePath);
     SDL_ClearError();
     if(tempSurf == nullptr) {
@@ -24,6 +33,11 @@ bool Texture::loadTexture(const char* FilePath) {
         return false;
     }
     SDL_FreeSurface(tempSurf);
+    this->textureName = textureName;
+
+    #if defined(full_debug) || defined(lite_debug)
+        printf( "Loaded texture: \"%s\"\n", FilePath);
+    #endif
     return true;
 }
 

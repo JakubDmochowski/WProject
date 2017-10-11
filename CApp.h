@@ -1,5 +1,4 @@
-#ifndef _CAPP_H_
-#define _CAPP_H_
+#pragma once
 
 #include <SDL.h>
 #include <ctime>
@@ -15,14 +14,11 @@
 #include "Settings.h"
 #include "CEvent.h"
 #include "Window.h"
-#include "Texture.h"
 #include "CRender.h"
 #include "Entity.h"
 
 struct CApp : KeyboardListener, WindowListener {
         bool running;
-
-        SDL_GLContext context;
 
         CApp();
 
@@ -36,5 +32,3 @@ struct CApp : KeyboardListener, WindowListener {
 
         void OnExit();
 };
-
-#endif // _CAPP_H_
