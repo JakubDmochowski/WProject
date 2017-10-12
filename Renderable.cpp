@@ -1,23 +1,24 @@
 #include "Renderable.h"
 #include "CRender.h"
 
-Renderable::Renderable(const std::string _textureName) : textureName(_textureName) {
-    src = NULL;
-    dst = NULL;
-    angle = 0;
-    rotateCenter = NULL;
+Renderable::Renderable(const std::string _textureName, TransformPtr _transform) : transform(_transform), textureName(_textureName) {
 }
 
 Renderable::~Renderable() {
-    delete src;
-    delete dst;
-    delete rotateCenter;
 }
 
-Renderable::Renderable(const Renderable& toCopy) {
-    src = toCopy.src;
-    dst = toCopy.dst;
-    angle = toCopy.angle;
-    textureName = toCopy.textureName;
-    rotateCenter = toCopy.rotateCenter;
+SDL_Rect* Renderable::getSrc() const {
+    return nullptr;
+}
+
+SDL_Rect* Renderable::getDst() const {
+    return transform == nullptr ? nullptr : transform->getRect();
+}
+
+double Renderable::getAngle() const {
+    return transform == nullptr ? 0 : transform->getAngle();
+}
+
+SDL_Point* Renderable::getRotateCenter() const {
+    return transform == nullptr ? nullptr : transform->getRotateCenter();
 }

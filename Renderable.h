@@ -4,18 +4,21 @@
 #include <string>
 #include <memory>
 
+#include "Transform.h"
+
 class Renderable {
-    //Temporary - to be expanded upon to achieve desired functionality
+    TransformPtr transform;
+
     public:
-        SDL_Rect* src;
-        SDL_Rect* dst;
-        double angle;
-        SDL_Point* rotateCenter;
         std::string textureName;
 
-        Renderable(const std::string textureName = "default.bmp");
-        Renderable(const Renderable&);
+        Renderable(const std::string textureName = "default.bmp", TransformPtr transform = NULL);
         ~Renderable();
+
+        SDL_Rect* getSrc() const;
+        SDL_Rect* getDst() const;
+        double getAngle() const;
+        SDL_Point* getRotateCenter() const;
 };
 
 typedef std::shared_ptr<Renderable> RenderablePtr;

@@ -1,9 +1,15 @@
 #pragma once
 
 #include <memory>
-/// pure template
+
+#include "Renderable.h"
+
 class Entity {
-    std::shared_ptr<Renderable*> renderable;
+    RenderablePtr renderable;
+
+    public:
+        Entity();
+        ~Entity();
 
     /// TO DO
     /*
@@ -14,6 +20,4 @@ class Entity {
     AI* behavior;
     */
     ///
-
-
 };

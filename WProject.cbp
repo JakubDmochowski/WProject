@@ -5,18 +5,21 @@
 		<Option title="WProject" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="Events\;Rendering\;" />
+		<Option virtualFolders="Events\;Rendering\;Mechanics\;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/WProject" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option projectCompilerOptionsRelation="-1" />
+				<Option projectCompilerOptionsRelation="2" />
 				<Option projectIncludeDirsRelation="-1" />
 				<Option projectLibDirsRelation="-1" />
 				<Compiler>
+					<Add option="-pedantic-errors" />
 					<Add option="-std=c++14" />
+					<Add option="-Dlite_debug" />
+					<Add option="-DshowFPS" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
@@ -69,9 +72,15 @@
 		<Unit filename="CRender.h">
 			<Option virtualFolder="Rendering/" />
 		</Unit>
-		<Unit filename="Entity.h" />
-		<Unit filename="FPS.cpp" />
-		<Unit filename="FPS.h" />
+		<Unit filename="Entity.h">
+			<Option virtualFolder="Mechanics/" />
+		</Unit>
+		<Unit filename="FPS.cpp">
+			<Option virtualFolder="Mechanics/" />
+		</Unit>
+		<Unit filename="FPS.h">
+			<Option virtualFolder="Mechanics/" />
+		</Unit>
 		<Unit filename="JoystickListener.cpp">
 			<Option virtualFolder="Events/" />
 		</Unit>
@@ -106,17 +115,17 @@
 		</Unit>
 		<Unit filename="Timer.cpp" />
 		<Unit filename="Timer.h" />
+		<Unit filename="Transform.cpp">
+			<Option virtualFolder="Mechanics/" />
+		</Unit>
+		<Unit filename="Transform.h">
+			<Option virtualFolder="Mechanics/" />
+		</Unit>
 		<Unit filename="UserDefinedListener.cpp">
 			<Option virtualFolder="Events/" />
 		</Unit>
 		<Unit filename="UserDefinedListener.h">
 			<Option virtualFolder="Events/" />
-		</Unit>
-		<Unit filename="Window.cpp">
-			<Option virtualFolder="Rendering/" />
-		</Unit>
-		<Unit filename="Window.h">
-			<Option virtualFolder="Rendering/" />
 		</Unit>
 		<Unit filename="WindowListener.cpp">
 			<Option virtualFolder="Events/" />
@@ -124,7 +133,6 @@
 		<Unit filename="WindowListener.h">
 			<Option virtualFolder="Events/" />
 		</Unit>
-		<Unit filename="define.h" />
 		<Unit filename="locale/localeEN.h" />
 		<Extensions>
 			<code_completion />

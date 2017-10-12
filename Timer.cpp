@@ -1,7 +1,5 @@
 #include "Timer.h"
 
-Timer Timer::GameTimerControl;
-
 Timer::Timer()
 {
     mStartTicks = 0;

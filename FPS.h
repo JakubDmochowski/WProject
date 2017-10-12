@@ -5,27 +5,22 @@
 
 class FPS {
     public:
-        static FPS FPSControl;
+        static void    onLoop();
+        static void    onInit();
+
+        static int     getFPS();
+        static double  getSpeedFactor();
+        static int     getTickFactor();
 
     private:
-        int     lastSec;
-        int     lastTime;
+        static int     lastSec;
+        static int     lastTime;
 
-        double  speedFactor;
+        static double  speedFactor;
 
-        int     frames;
-        int     framesCount;
+        static int     frames;
+        static int     framesCount;
 
-        int     ticks;
-
-    public:
+        static int     ticks;
         FPS();
-
-        void    onLoop();
-
-    public:
-        int     getFPS() const;
-
-        double  getSpeedFactor() const;
-        int     getTickFactor() const;
 };

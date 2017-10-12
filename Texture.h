@@ -4,7 +4,6 @@
 #include <cstdio>
 #include <list>
 
-#include "define.h"
 #include "Renderable.h"
 
 class Texture {
@@ -21,4 +20,4 @@ class Texture {
         SDL_Texture* getTexture() const;
 };
 
-typedef std::shared_ptr<Texture> TexturePtr;
+typedef std::unique_ptr<Texture> TexturePtr;

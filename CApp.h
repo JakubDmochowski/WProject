@@ -10,15 +10,14 @@
 
 #include "FPS.h"
 #include "Timer.h"
-#include "define.h"
 #include "Settings.h"
 #include "CEvent.h"
-#include "Window.h"
 #include "CRender.h"
 #include "Entity.h"
 
 struct CApp : KeyboardListener, WindowListener {
         bool running;
+        SDL_Window* window;
 
         CApp();
 

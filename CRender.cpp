@@ -3,12 +3,6 @@
 SDL_Renderer* CRender::renderer;
 std::map<std::string, TexturePtr> CRender::textures;
 
-CRender::CRender() {
-}
-
-CRender::~CRender() {
-}
-
 void CRender::handleRender() {
     SDL_RenderClear(renderer);
     for(auto i = textures.begin(); i != textures.end();) {
@@ -16,7 +10,7 @@ void CRender::handleRender() {
             if(j->use_count() == 1) {
                 j = (*i).second->renderables.erase(j);
             } else {
-                renderTexture((*i).second, (*j)->src, (*j)->dst, (*j)->angle, (*j)->rotateCenter);
+                renderTexture((*i).second, (*j)->getSrc(), (*j)->getDst(), (*j)->getAngle(), (*j)->getRotateCenter());
                 ++j;
             }
         }
@@ -34,25 +28,25 @@ SDL_Renderer* CRender::getRenderer() const {
 }
 
 void CRender::addTexture(TexturePtr newTexture, const std::string textureName) {
-    textures.insert(std::pair<std::string, TexturePtr>(textureName, newTexture));
+    textures.insert(std::pair<std::string, TexturePtr>(textureName, std::move(newTexture)));
 }
 
 void CRender::addRenderableToTexture(RenderablePtr renderable) {
     if(!renderable.get()){
-        throw std::runtime_error("CRender::addRenderableToTexture renderablePtr = null");
+        throw std::runtime_error("CRender::addRenderableToTexture RenderablePtr = nullptr");
         return;
     }
     auto tmpTextureIterator = textures.find(renderable->textureName);
     if(tmpTextureIterator == textures.end()) {
-        TexturePtr tempTexture(new Texture());
+        TexturePtr tempTexture = std::make_unique<Texture>();
         if(!tempTexture->loadTexture(renderable->textureName.c_str())){
             if((tmpTextureIterator = textures.find("default.bmp")) != textures.end()) {
                 tempTexture->loadTexture("default.bmp");
-                addTexture(tempTexture, "default.bmp");
+                addTexture(std::move(tempTexture), "default.bmp");
                 tmpTextureIterator = textures.find("default.bmp");
             }
         } else {
-            addTexture(tempTexture, renderable->textureName);
+            addTexture(std::move(tempTexture), renderable->textureName);
             tmpTextureIterator = textures.find(renderable->textureName);
         }
     }
@@ -60,6 +54,6 @@ void CRender::addRenderableToTexture(RenderablePtr renderable) {
     tempList->insert(tempList->end(), renderable);
 }
 
-void CRender::renderTexture(TexturePtr toRender, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* rotateCenter) {
+void CRender::renderTexture(TexturePtr& toRender, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* rotateCenter) {
     SDL_RenderCopyEx(renderer, toRender->getTexture(), srcrect, dstrect, angle, rotateCenter, SDL_FLIP_NONE);
 }

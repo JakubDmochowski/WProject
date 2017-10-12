@@ -4,8 +4,6 @@
 
 class Timer
 {
-    public:
-        static Timer GameTimerControl;
     private:
         //The clock time when the timer started
         unsigned int mStartTicks;
