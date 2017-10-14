@@ -8,13 +8,15 @@
 
 class Renderable {
     TransformPtr transform;
+    public: std::string textureName;
 
     public:
-        std::string textureName;
 
         Renderable(const std::string textureName = "default.bmp", TransformPtr transform = NULL);
+        Renderable(const Renderable&);
         ~Renderable();
 
+        std::string getTextureName() const;
         SDL_Rect* getSrc() const;
         SDL_Rect* getDst() const;
         double getAngle() const;

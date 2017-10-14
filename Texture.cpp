@@ -3,6 +3,7 @@
 
 Texture::Texture() {
     std::list<RenderablePtr> renderables;
+    priority = Priority::UNDEFINED;
 }
 
 Texture::~Texture() {
@@ -16,31 +17,35 @@ Texture::~Texture() {
 bool Texture::loadTexture(const char* textureName) {
     std::string tmpStr = "./gfx/";
     tmpStr.append(textureName);
-    const char* FilePath = tmpStr.c_str();
-    SDL_Surface* tempSurf = SDL_LoadBMP(FilePath);
+    const char* filePath = tmpStr.c_str();
+    SDL_Surface* tempSurf = SDL_LoadBMP(filePath);
     SDL_ClearError();
     if(tempSurf == nullptr) {
-        printf( "Unable to load image %s! SDL Error: %s\n", FilePath, SDL_GetError() );
+        printf( "Unable to load image %s! SDL Error: %s\n", filePath, SDL_GetError() );
         SDL_ClearError();
         SDL_FreeSurface(tempSurf);
         return false;
     }
     texture = SDL_CreateTextureFromSurface(CRender::renderer, tempSurf);
     if(texture == nullptr) {
-        printf( "Unable to create texture %s! SDL Error: %s\n", FilePath, SDL_GetError() );
+        printf( "Unable to create texture %s! SDL Error: %s\n", filePath, SDL_GetError() );
         SDL_ClearError();
         SDL_FreeSurface(tempSurf);
         return false;
     }
     SDL_FreeSurface(tempSurf);
-    this->textureName = textureName;
+    std::swap(this->textureName, textureName);
 
     #if defined(full_debug) || defined(lite_debug)
-        printf( "Loaded texture: \"%s\"\n", FilePath);
+        printf( "Loaded texture: \"%s\"\n", filePath);
     #endif
     return true;
 }
 
 SDL_Texture* Texture::getTexture() const {
     return texture;
+}
+
+Priority Texture::getPriority() const {
+    return priority;
 }

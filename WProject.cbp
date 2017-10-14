@@ -99,6 +99,7 @@
 		<Unit filename="MouseListener.h">
 			<Option virtualFolder="Events/" />
 		</Unit>
+		<Unit filename="Priority.h" />
 		<Unit filename="Renderable.cpp">
 			<Option virtualFolder="Rendering/" />
 		</Unit>

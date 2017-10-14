@@ -3,6 +3,19 @@
 Transform::Transform(int _w, int _h, double _x, double _y, double _angle, SDL_Point* _rotateCenter) : x(_x), y(_y), w(_w), h(_h), angle(_angle), rotateCenter(_rotateCenter) {
 }
 
+Transform::Transform(const Transform& toCopy) {
+    SDL_Rect* copyRect = toCopy.getRect();
+    x = copyRect->x;
+    y = copyRect->y;
+    w = copyRect->w;
+    h = copyRect->h;
+    angle = toCopy.getAngle();
+    SDL_Point* copyRotateCenter = new SDL_Point();
+    copyRotateCenter->x = toCopy.getRotateCenter()->x;
+    copyRotateCenter->y = toCopy.getRotateCenter()->y;
+    rotateCenter = copyRotateCenter;
+}
+
 Transform::~Transform() {
 }
 

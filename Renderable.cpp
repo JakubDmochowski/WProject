@@ -4,6 +4,11 @@
 Renderable::Renderable(const std::string _textureName, TransformPtr _transform) : transform(_transform), textureName(_textureName) {
 }
 
+Renderable::Renderable(const Renderable& toCopy) {
+    textureName = toCopy.textureName;
+    transform = std::make_shared<Transform>(*transform);
+}
+
 Renderable::~Renderable() {
 }
 
@@ -21,4 +26,8 @@ double Renderable::getAngle() const {
 
 SDL_Point* Renderable::getRotateCenter() const {
     return transform == nullptr ? nullptr : transform->getRotateCenter();
+}
+
+std::string Renderable::getTextureName() const {
+    return textureName;
 }

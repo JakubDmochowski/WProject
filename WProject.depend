@@ -400,10 +400,10 @@
 1507847391 source:c:\users\botpc\desktop\workspace\github\wproject\capp_initialization.cpp
 	"CApp.h"
 
-1507291413 source:c:\users\user\desktop\workspace\wproject\cevent.cpp
+1507893996 source:c:\users\user\desktop\workspace\wproject\cevent.cpp
 	"CEvent.h"
 
-1507729133 c:\users\user\desktop\workspace\wproject\cevent.h
+1507893996 c:\users\user\desktop\workspace\wproject\cevent.h
 	"KeyboardListener.h"
 	"MouseListener.h"
 	"WindowListener.h"
@@ -437,11 +437,11 @@
 	<cstdio>
 	"FPS.h"
 
-1507729185 source:c:\users\user\desktop\workspace\wproject\capp.cpp
+1508019512 source:c:\users\user\desktop\workspace\wproject\capp.cpp
 	"CApp.h"
 	<cstdlib>
 
-1507729049 c:\users\user\desktop\workspace\wproject\capp.h
+1507893996 c:\users\user\desktop\workspace\wproject\capp.h
 	<SDL.h>
 	<ctime>
 	<cstdio>
@@ -450,14 +450,12 @@
 	"locale/localeEN.h"
 	"FPS.h"
 	"Timer.h"
-	"define.h"
 	"Settings.h"
 	"CEvent.h"
-	"Window.h"
 	"CRender.h"
 	"Entity.h"
 
-1493812859 c:\users\user\desktop\workspace\wproject\locale\localeen.h
+1507893996 c:\users\user\desktop\workspace\wproject\locale\localeen.h
 
 1507732583 c:\users\user\desktop\workspace\wproject\define.h
 
@@ -476,13 +474,13 @@
 1493812859 source:c:\users\user\desktop\workspace\wproject\windowlistener.cpp
 	"WindowListener.h"
 
-1507386414 source:c:\users\user\desktop\workspace\wproject\capp_initialization.cpp
+1507893996 source:c:\users\user\desktop\workspace\wproject\capp_initialization.cpp
 	"CApp.h"
 
-1507296578 source:c:\users\user\desktop\workspace\wproject\timer.cpp
+1507893996 source:c:\users\user\desktop\workspace\wproject\timer.cpp
 	"Timer.h"
 
-1507729088 c:\users\user\desktop\workspace\wproject\timer.h
+1507893996 c:\users\user\desktop\workspace\wproject\timer.h
 	<SDL.h>
 
 1505486302 source:c:\users\user\desktop\workspace\wproject\cfps.cpp
@@ -491,11 +489,11 @@
 1505486446 c:\users\user\desktop\workspace\wproject\cfps.h
 	<SDL.h>
 
-1507729089 c:\users\user\desktop\workspace\wproject\fps.h
+1507893996 c:\users\user\desktop\workspace\wproject\fps.h
 	<SDL.h>
 	<cstdio>
 
-1505678956 source:c:\users\user\desktop\workspace\wproject\fps.cpp
+1507893996 source:c:\users\user\desktop\workspace\wproject\fps.cpp
 	"FPS.h"
 
 1507729133 c:\users\user\desktop\workspace\wproject\window.h
@@ -504,26 +502,25 @@
 1505678956 source:c:\users\user\desktop\workspace\wproject\window.cpp
 	"Window.h"
 
-1507727724 source:c:\users\user\desktop\workspace\wproject\crender.cpp
+1508019496 source:c:\users\user\desktop\workspace\wproject\crender.cpp
 	"CRender.h"
 
-1507727454 c:\users\user\desktop\workspace\wproject\crender.h
+1508018110 c:\users\user\desktop\workspace\wproject\crender.h
 	<SDL.h>
-	<map>
+	<set>
 	<algorithm>
 	<memory>
-	"Window.h"
 	"Texture.h"
+	"Priority.h"
 
-1507728691 source:c:\users\user\desktop\workspace\wproject\texture.cpp
+1508018420 source:c:\users\user\desktop\workspace\wproject\texture.cpp
 	"Texture.h"
 	"CRender.h"
 
-1507728451 c:\users\user\desktop\workspace\wproject\texture.h
+1507996259 c:\users\user\desktop\workspace\wproject\texture.h
 	<SDL.h>
 	<cstdio>
 	<list>
-	"define.h"
 	"Renderable.h"
 
 1507848168 c:\users\botpc\desktop\workspace\github\wproject\fps.h
@@ -575,17 +572,19 @@
 	"Renderable.h"
 	"CRender.h"
 
-1507581879 c:\users\user\desktop\workspace\wproject\renderable.h
+1508015776 c:\users\user\desktop\workspace\wproject\renderable.h
 	<SDL.h>
 	<string>
 	<memory>
+	"Transform.h"
 
-1507653549 source:c:\users\user\desktop\workspace\wproject\renderable.cpp
+1508015977 source:c:\users\user\desktop\workspace\wproject\renderable.cpp
 	"Renderable.h"
 	"CRender.h"
 
-1507572647 c:\users\user\desktop\workspace\wproject\entity.h
+1507893996 c:\users\user\desktop\workspace\wproject\entity.h
 	<memory>
+	"Renderable.h"
 
 1507838097 c:\users\botpc\desktop\workspace\github\wproject\entity.h
 	<memory>
@@ -597,4 +596,13 @@
 
 1507847877 source:c:\users\botpc\desktop\workspace\github\wproject\transform.cpp
 	"Transform.h"
+
+1508015922 c:\users\user\desktop\workspace\wproject\transform.h
+	<memory>
+	<SDL.h>
+
+1508016003 source:c:\users\user\desktop\workspace\wproject\transform.cpp
+	"Transform.h"
+
+1507996857 c:\users\user\desktop\workspace\wproject\priority.h
 
