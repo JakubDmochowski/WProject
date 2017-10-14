@@ -323,7 +323,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1507848439 source:c:\users\botpc\desktop\workspace\github\wproject\capp.cpp
+1508021126 source:c:\users\botpc\desktop\workspace\github\wproject\capp.cpp
 	"CApp.h"
 	<cstdlib>
 
@@ -533,23 +533,24 @@
 1507836126 c:\users\botpc\desktop\workspace\github\wproject\window.h
 	<SDL.h>
 
-1507847149 c:\users\botpc\desktop\workspace\github\wproject\texture.h
+1508020548 c:\users\botpc\desktop\workspace\github\wproject\texture.h
 	<SDL.h>
 	<cstdio>
 	<list>
 	"Renderable.h"
 
-1507847322 c:\users\botpc\desktop\workspace\github\wproject\crender.h
+1508020062 c:\users\botpc\desktop\workspace\github\wproject\crender.h
 	<SDL.h>
-	<map>
+	<set>
 	<algorithm>
 	<memory>
 	"Texture.h"
+	"Priority.h"
 
 1507843181 source:c:\users\botpc\desktop\workspace\github\wproject\fps.cpp
 	"FPS.h"
 
-1507836126 source:c:\users\botpc\desktop\workspace\github\wproject\texture.cpp
+1508021070 source:c:\users\botpc\desktop\workspace\github\wproject\texture.cpp
 	"Texture.h"
 	"CRender.h"
 
@@ -559,16 +560,16 @@
 1505679078 source:c:\users\botpc\desktop\workspace\github\wproject\window.cpp
 	"Window.h"
 
-1507847837 c:\users\botpc\desktop\workspace\github\wproject\renderable.h
+1508019843 c:\users\botpc\desktop\workspace\github\wproject\renderable.h
 	<SDL.h>
 	<string>
 	<memory>
 	"Transform.h"
 
-1507847250 source:c:\users\botpc\desktop\workspace\github\wproject\crender.cpp
+1508021234 source:c:\users\botpc\desktop\workspace\github\wproject\crender.cpp
 	"CRender.h"
 
-1507848050 source:c:\users\botpc\desktop\workspace\github\wproject\renderable.cpp
+1508019843 source:c:\users\botpc\desktop\workspace\github\wproject\renderable.cpp
 	"Renderable.h"
 	"CRender.h"
 
@@ -590,11 +591,11 @@
 	<memory>
 	"Renderable.h"
 
-1507847790 c:\users\botpc\desktop\workspace\github\wproject\transform.h
+1508019843 c:\users\botpc\desktop\workspace\github\wproject\transform.h
 	<memory>
 	<SDL.h>
 
-1507847877 source:c:\users\botpc\desktop\workspace\github\wproject\transform.cpp
+1508019843 source:c:\users\botpc\desktop\workspace\github\wproject\transform.cpp
 	"Transform.h"
 
 1508015922 c:\users\user\desktop\workspace\wproject\transform.h
@@ -605,4 +606,6 @@
 	"Transform.h"
 
 1507996857 c:\users\user\desktop\workspace\wproject\priority.h
+
+1508019843 c:\users\botpc\desktop\workspace\github\wproject\priority.h
 

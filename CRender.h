@@ -22,5 +22,5 @@ class CRender {
     private:
         CRender();
 
-        static inline void renderTexture(const Texture& toRender, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* rotateCenter);
+        static inline void renderTexture(const TexturePtr& toRender, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* rotateCenter);
 };

@@ -10,11 +10,11 @@ Texture::~Texture() {
     SDL_DestroyTexture(texture);
 
     #if defined(lite_debug)
-        printf("Destroyed texture: \"./gfx/%s\"\n", textureName);
+        printf("Destroyed texture: \"./gfx/%s\"\n", textureName.c_str());
     #endif
 }
 
-bool Texture::loadTexture(const char* textureName) {
+bool Texture::loadTexture(std::string textureName) {
     std::string tmpStr = "./gfx/";
     tmpStr.append(textureName);
     const char* filePath = tmpStr.c_str();

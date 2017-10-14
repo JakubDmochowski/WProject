@@ -24,7 +24,6 @@ int CApp::execute() {
     /// CRAP CODE
     RenderablePtr temp = RenderablePtr(new Renderable());
     CRender::addRenderableToTexture(temp);
-            printf("%s\n", (*CRender::textures.begin())->textureName);
     /// --CRAP CODE
 
     while(running) {

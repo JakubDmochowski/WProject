@@ -19,13 +19,13 @@ class Texture {
     public:
         std::list<RenderablePtr> renderables;
 
-        const char* textureName;
+        std::string textureName;
         Priority priority;
 
         explicit Texture();
         virtual ~Texture();
 
-        bool  loadTexture(const char* filePath);
+        bool  loadTexture(std::string filePath);
         SDL_Texture* getTexture() const;
         Priority getPriority() const;
 };
