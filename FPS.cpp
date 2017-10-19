@@ -1,14 +1,14 @@
 #include "FPS.h"
 
-int FPS::lastSec     = 0;
-int FPS::lastTime    = 0;
+unsigned int FPS::lastSec     = 0;
+unsigned int FPS::lastTime    = 0;
 
 double FPS::speedFactor    = 0;
 
-int FPS::frames         = 0;
-int FPS::framesCount    = 0;
+unsigned int FPS::frames         = 0;
+unsigned int FPS::framesCount    = 0;
 
-int FPS::ticks = 0;
+unsigned int FPS::ticks = 0;
 
 void FPS::onLoop() {
     if(lastSec + 1000 < SDL_GetTicks()) {
@@ -23,7 +23,7 @@ void FPS::onLoop() {
     ++framesCount;
 }
 
-int FPS::getFPS() {
+unsigned int FPS::getFPS() {
     return frames;
 }
 
@@ -31,6 +31,6 @@ double FPS::getSpeedFactor() {
     return speedFactor;
 }
 
-int FPS::getTickFactor() {
+unsigned int FPS::getTickFactor() {
     return ticks;
 }

@@ -26,6 +26,7 @@
 					<Add library="mingw32" />
 					<Add library="SDL2main" />
 					<Add library="SDL2" />
+					<Add library="SDL2_ttf" />
 					<Add library="opengl32" />
 					<Add library="glu32" />
 				</Linker>
@@ -81,6 +82,12 @@
 		<Unit filename="FPS.h">
 			<Option virtualFolder="Mechanics/" />
 		</Unit>
+		<Unit filename="Font.cpp">
+			<Option virtualFolder="Rendering/" />
+		</Unit>
+		<Unit filename="Font.h">
+			<Option virtualFolder="Rendering/" />
+		</Unit>
 		<Unit filename="JoystickListener.cpp">
 			<Option virtualFolder="Events/" />
 		</Unit>
@@ -99,7 +106,6 @@
 		<Unit filename="MouseListener.h">
 			<Option virtualFolder="Events/" />
 		</Unit>
-		<Unit filename="Priority.h" />
 		<Unit filename="Renderable.cpp">
 			<Option virtualFolder="Rendering/" />
 		</Unit>
@@ -108,6 +114,12 @@
 		</Unit>
 		<Unit filename="Settings.cpp" />
 		<Unit filename="Settings.h" />
+		<Unit filename="Text.cpp">
+			<Option virtualFolder="Rendering/" />
+		</Unit>
+		<Unit filename="Text.h">
+			<Option virtualFolder="Rendering/" />
+		</Unit>
 		<Unit filename="Texture.cpp">
 			<Option virtualFolder="Rendering/" />
 		</Unit>

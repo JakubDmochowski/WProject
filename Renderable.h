@@ -8,19 +8,20 @@
 
 class Renderable {
     TransformPtr transform;
-    public: std::string textureName;
+    std::string textureName;
+
+    explicit Renderable(const Renderable&);
+    explicit Renderable(const std::string textureName, TransformPtr transform);
 
     public:
-
-        Renderable(const std::string textureName = "default.bmp", TransformPtr transform = NULL);
-        Renderable(const Renderable&);
-        ~Renderable();
-
+        static std::shared_ptr<Renderable> create(const std::string textureName = "default.bmp", TransformPtr transform = nullptr);
         std::string getTextureName() const;
         SDL_Rect* getSrc() const;
         SDL_Rect* getDst() const;
         double getAngle() const;
         SDL_Point* getRotateCenter() const;
+
+        ~Renderable();
 };
 
 typedef std::shared_ptr<Renderable> RenderablePtr;

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SDL.h>
+#include <SDL_ttf.h>
 #include <ctime>
 #include <cstdio>
 #include <gl/gl.h>
@@ -14,8 +15,9 @@
 #include "CEvent.h"
 #include "CRender.h"
 #include "Entity.h"
+#include "Text.h"
 
-struct CApp : KeyboardListener, WindowListener {
+struct CApp : KeyboardListener, WindowListener, MouseListener {
         bool running;
         SDL_Window* window;
 

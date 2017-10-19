@@ -5,10 +5,14 @@ bool CApp::initiate() {
         SDL_SetHint(SDL_HINT_WINDOWS_DISABLE_THREAD_NAMING, "1");
     #endif
 
-    if(SDL_Init( SDL_INIT_EVERYTHING ) != 0){
+    if(SDL_Init( SDL_INIT_EVERYTHING ) != 0) {
         SDL_Log("Unable to initialize SDL: %s", SDL_GetError());
         return false;
-    };
+    }
+
+    if(TTF_Init() != 0) {
+        printf("Unable to initialize TTF: %s", TTF_GetError());
+    }
 
     if(!Settings::settings.getFullscreen()) {
         window = SDL_CreateWindow(TXT_TITLE,

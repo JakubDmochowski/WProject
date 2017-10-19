@@ -8,19 +8,19 @@ class FPS {
         static void    onLoop();
         static void    onInit();
 
-        static int     getFPS();
-        static double  getSpeedFactor();
-        static int     getTickFactor();
+        static unsigned int     getFPS();
+        static double           getSpeedFactor();
+        static unsigned int     getTickFactor();
 
     private:
-        static int     lastSec;
-        static int     lastTime;
+        static unsigned int     lastSec;
+        static unsigned int     lastTime;
 
-        static double  speedFactor;
+        static double           speedFactor;
 
-        static int     frames;
-        static int     framesCount;
+        static unsigned int     frames;
+        static unsigned int     framesCount;
 
-        static int     ticks;
+        static unsigned int     ticks;
         FPS();
 };

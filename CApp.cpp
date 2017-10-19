@@ -22,8 +22,8 @@ int CApp::execute() {
     #endif
 
     /// CRAP CODE
-    RenderablePtr temp = RenderablePtr(new Renderable());
-    CRender::addRenderableToTexture(temp);
+    RenderablePtr temp = Renderable::create();
+    //Text temp1("Hah");
     /// --CRAP CODE
 
     while(running) {
@@ -32,6 +32,7 @@ int CApp::execute() {
         CRender::handleRender();
     }
     SDL_DestroyWindow(window);
+    TTF_Quit();
     SDL_Quit();
 
     return 0;

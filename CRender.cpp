@@ -2,7 +2,7 @@
 
 SDL_Renderer* CRender::renderer;
 
-std::set<TexturePtr> CRender::textures;
+std::set<TexturePtr, CRenderTextureComparator> CRender::textures;
 
 void CRender::handleRender() {
     SDL_RenderClear(renderer);
@@ -28,15 +28,15 @@ SDL_Renderer* CRender::getRenderer() const {
     return renderer;
 }
 
-void CRender::addTexture(TexturePtr newTexture) {
+inline void CRender::addTexture(TexturePtr newTexture) {
     textures.insert(textures.end(), std::move(newTexture));
 }
 
 void CRender::addRenderableToTexture(const RenderablePtr& renderable) {
-    auto cmpRenderable = [&](const TexturePtr& t){ return strcmp(t->textureName.c_str(), renderable->getTextureName().c_str()) == 0;};
+    auto cmpTexture = [&](const TexturePtr& t){ return strcmp(t->textureName.c_str(), renderable->getTextureName().c_str()) == 0;};
     auto cmpDefault = [&](const TexturePtr& t){ return strcmp(t->textureName.c_str(), "default.bmp") == 0;};
 
-    auto tmpTextureIterator = std::find_if(textures.begin(), textures.end(), cmpRenderable);
+    auto tmpTextureIterator = std::find_if(textures.begin(), textures.end(), cmpTexture);
     if(tmpTextureIterator == textures.end()) {
         TexturePtr tempTexture(new Texture());
         if(!tempTexture->loadTexture(renderable->getTextureName().c_str())) {
@@ -47,7 +47,7 @@ void CRender::addRenderableToTexture(const RenderablePtr& renderable) {
             }
         } else {
             addTexture(std::move(tempTexture));
-            tmpTextureIterator = std::find_if(textures.begin(), textures.end(), cmpRenderable);
+            tmpTextureIterator = std::find_if(textures.begin(), textures.end(), cmpTexture);
         }
     }
     tmpTextureIterator->get()->renderables.insert(tmpTextureIterator->get()->renderables.end(), renderable);

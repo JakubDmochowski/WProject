@@ -437,12 +437,13 @@
 	<cstdio>
 	"FPS.h"
 
-1508019512 source:c:\users\user\desktop\workspace\wproject\capp.cpp
+1508449028 source:c:\users\user\desktop\workspace\wproject\capp.cpp
 	"CApp.h"
 	<cstdlib>
 
-1507893996 c:\users\user\desktop\workspace\wproject\capp.h
+1508445512 c:\users\user\desktop\workspace\wproject\capp.h
 	<SDL.h>
+	<SDL_ttf.h>
 	<ctime>
 	<cstdio>
 	<gl/gl.h>
@@ -454,6 +455,7 @@
 	"CEvent.h"
 	"CRender.h"
 	"Entity.h"
+	"Text.h"
 
 1507893996 c:\users\user\desktop\workspace\wproject\locale\localeen.h
 
@@ -474,7 +476,7 @@
 1493812859 source:c:\users\user\desktop\workspace\wproject\windowlistener.cpp
 	"WindowListener.h"
 
-1507893996 source:c:\users\user\desktop\workspace\wproject\capp_initialization.cpp
+1508271795 source:c:\users\user\desktop\workspace\wproject\capp_initialization.cpp
 	"CApp.h"
 
 1507893996 source:c:\users\user\desktop\workspace\wproject\timer.cpp
@@ -489,11 +491,11 @@
 1505486446 c:\users\user\desktop\workspace\wproject\cfps.h
 	<SDL.h>
 
-1507893996 c:\users\user\desktop\workspace\wproject\fps.h
+1508270648 c:\users\user\desktop\workspace\wproject\fps.h
 	<SDL.h>
 	<cstdio>
 
-1507893996 source:c:\users\user\desktop\workspace\wproject\fps.cpp
+1508270664 source:c:\users\user\desktop\workspace\wproject\fps.cpp
 	"FPS.h"
 
 1507729133 c:\users\user\desktop\workspace\wproject\window.h
@@ -502,22 +504,22 @@
 1505678956 source:c:\users\user\desktop\workspace\wproject\window.cpp
 	"Window.h"
 
-1508019496 source:c:\users\user\desktop\workspace\wproject\crender.cpp
+1508449816 source:c:\users\user\desktop\workspace\wproject\crender.cpp
 	"CRender.h"
 
-1508018110 c:\users\user\desktop\workspace\wproject\crender.h
+1508449832 c:\users\user\desktop\workspace\wproject\crender.h
 	<SDL.h>
 	<set>
 	<algorithm>
 	<memory>
 	"Texture.h"
-	"Priority.h"
+	"Font.h"
 
-1508018420 source:c:\users\user\desktop\workspace\wproject\texture.cpp
+1508449816 source:c:\users\user\desktop\workspace\wproject\texture.cpp
 	"Texture.h"
 	"CRender.h"
 
-1507996259 c:\users\user\desktop\workspace\wproject\texture.h
+1508449782 c:\users\user\desktop\workspace\wproject\texture.h
 	<SDL.h>
 	<cstdio>
 	<list>
@@ -573,13 +575,13 @@
 	"Renderable.h"
 	"CRender.h"
 
-1508015776 c:\users\user\desktop\workspace\wproject\renderable.h
+1508450103 c:\users\user\desktop\workspace\wproject\renderable.h
 	<SDL.h>
 	<string>
 	<memory>
 	"Transform.h"
 
-1508015977 source:c:\users\user\desktop\workspace\wproject\renderable.cpp
+1508449243 source:c:\users\user\desktop\workspace\wproject\renderable.cpp
 	"Renderable.h"
 	"CRender.h"
 
@@ -608,4 +610,21 @@
 1507996857 c:\users\user\desktop\workspace\wproject\priority.h
 
 1508019843 c:\users\botpc\desktop\workspace\github\wproject\priority.h
+
+1508442976 c:\users\user\desktop\workspace\wproject\font.h
+	<SDL_ttf.h>
+	<string>
+
+1508443193 source:c:\users\user\desktop\workspace\wproject\font.cpp
+	"Font.h"
+
+1508449938 source:c:\users\user\desktop\workspace\wproject\text.cpp
+	"Text.h"
+
+1508444970 c:\users\user\desktop\workspace\wproject\text.h
+	"Renderable.h"
+	"Font.h"
+	"CRender.h"
+	<string>
+	<SDL.h>
 

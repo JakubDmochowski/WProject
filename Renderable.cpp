@@ -12,7 +12,14 @@ Renderable::Renderable(const Renderable& toCopy) {
 Renderable::~Renderable() {
 }
 
+RenderablePtr Renderable::create(const std::string textureName, TransformPtr transform) {
+    RenderablePtr temp(new Renderable(textureName, transform));
+    CRender::addRenderableToTexture(temp);
+    return temp;
+}
+
 SDL_Rect* Renderable::getSrc() const {
+    ///TODO
     return nullptr;
 }
 

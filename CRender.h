@@ -5,10 +5,16 @@
 #include <algorithm>
 #include <memory>
 #include "Texture.h"
-#include "Priority.h"
+#include "Font.h"
+
+struct CRenderTextureComparator {
+    bool operator()(const TexturePtr& left, const TexturePtr& right) {
+        return left->priority < right->priority;
+    }
+};
 
 class CRender {
-    public: static std::set<TexturePtr> textures;
+    static std::set<TexturePtr, CRenderTextureComparator> textures;
 
     public:
         static SDL_Renderer* renderer;

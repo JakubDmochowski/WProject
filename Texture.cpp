@@ -19,7 +19,6 @@ bool Texture::loadTexture(std::string textureName) {
     tmpStr.append(textureName);
     const char* filePath = tmpStr.c_str();
     SDL_Surface* tempSurf = SDL_LoadBMP(filePath);
-    SDL_ClearError();
     if(tempSurf == nullptr) {
         printf( "Unable to load image %s! SDL Error: %s\n", filePath, SDL_GetError() );
         SDL_ClearError();
@@ -44,6 +43,14 @@ bool Texture::loadTexture(std::string textureName) {
 
 SDL_Texture* Texture::getTexture() const {
     return texture;
+}
+
+std::string Texture::getTextureName() const {
+    return textureName;
+}
+
+void Texture::setTextureName(std::string name) {
+    textureName = name;
 }
 
 Priority Texture::getPriority() const {
