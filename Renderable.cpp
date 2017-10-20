@@ -9,18 +9,16 @@ Renderable::Renderable(const Renderable& toCopy) {
     transform = std::make_shared<Transform>(*transform);
 }
 
-Renderable::~Renderable() {
-}
-
-RenderablePtr Renderable::create(const std::string textureName, TransformPtr transform) {
+RenderablePtr Renderable::create(const std::string textureName, TransformPtr transform, AnimationPtr animation) {
     RenderablePtr temp(new Renderable(textureName, transform));
+    temp->animation = std::move(animation);
     CRender::addRenderableToTexture(temp);
     return temp;
 }
 
 SDL_Rect* Renderable::getSrc() const {
-    ///TODO
-    return nullptr;
+    if(animation == nullptr) return nullptr;
+    return animation->getRect();
 }
 
 SDL_Rect* Renderable::getDst() const {

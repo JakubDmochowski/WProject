@@ -12,7 +12,6 @@ Font::Font(std::string _font, int _fontSize) : fontSize(_fontSize) {
 }
 
 Font::~Font() {
-    delete font;
 }
 
 void Font::setColor(int R, int G, int B, int A) {

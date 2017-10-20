@@ -5,20 +5,21 @@
 
 class Settings {
     Settings();
-    int screen_width;
-    int screen_height;
-    bool fullscreen;
-    int FPSCap;
+    static int screen_width;
+    static int screen_height;
+    static bool fullscreen;
+    static int FPSCap;
 
     public:
-        static Settings settings;
-        int getScreenWidth() const;
-        int getScreenHeight() const;
-        bool getFullscreen() const;
-        int getFPSCap() const;
+        static void initialize();
 
-        void setScreenWidth(int width);
-        void setScreenHeight(int height);
-        void setFullscreen(bool fc);
-        void setFPSCap(int cap);
+        static int getScreenWidth();
+        static int getScreenHeight();
+        static bool getFullscreen();
+        static int getFPSCap();
+
+        static void setScreenWidth(int width);
+        static void setScreenHeight(int height);
+        static void setFullscreen(bool fc);
+        static void setFPSCap(int cap);
 };

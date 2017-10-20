@@ -6,7 +6,7 @@
 #include <string>
 #include <SDL.h>
 
-class Text{
+class Text {
     static unsigned int IDCounter;
     unsigned int Id;
     Font font;

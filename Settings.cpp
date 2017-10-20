@@ -1,8 +1,11 @@
 #include "Settings.h"
 
-Settings Settings::settings;
+int Settings::screen_width;
+int Settings::screen_height;
+bool Settings::fullscreen;
+int Settings::FPSCap;
 
-Settings::Settings() {
+void Settings::initialize() {
     FILE* file = fopen("./Settings.txt", "r");
     fscanf(file, "ScreenWidth: %d\n", &screen_width);
     fscanf(file, "ScreenHeight: %d\n", &screen_height);
@@ -13,19 +16,19 @@ Settings::Settings() {
     fclose(file);
 }
 
-int Settings::getScreenWidth() const {
+int Settings::getScreenWidth() {
     return screen_width;
 }
 
-int Settings::getScreenHeight() const {
+int Settings::getScreenHeight() {
     return screen_height;
 }
 
-bool Settings::getFullscreen() const {
+bool Settings::getFullscreen() {
     return fullscreen;
 }
 
-int Settings::getFPSCap() const {
+int Settings::getFPSCap() {
     return FPSCap;
 }
 

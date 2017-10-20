@@ -323,12 +323,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1508021126 source:c:\users\botpc\desktop\workspace\github\wproject\capp.cpp
+1508517553 source:c:\users\botpc\desktop\workspace\github\wproject\capp.cpp
 	"CApp.h"
 	<cstdlib>
 
-1507847435 c:\users\botpc\desktop\workspace\github\wproject\capp.h
+1508450399 c:\users\botpc\desktop\workspace\github\wproject\capp.h
 	<SDL.h>
+	<SDL_ttf.h>
 	<ctime>
 	<cstdio>
 	<gl/gl.h>
@@ -340,6 +341,7 @@
 	"CEvent.h"
 	"CRender.h"
 	"Entity.h"
+	"Text.h"
 
 1507847030 c:\users\botpc\desktop\workspace\github\wproject\define.h
 
@@ -390,14 +392,14 @@
 1493813273 source:c:\users\botpc\desktop\workspace\github\wproject\windowlistener.cpp
 	"WindowListener.h"
 
-1505679078 source:c:\users\botpc\desktop\workspace\github\wproject\settings.cpp
+1508516007 source:c:\users\botpc\desktop\workspace\github\wproject\settings.cpp
 	"Settings.h"
 
-1507836125 c:\users\botpc\desktop\workspace\github\wproject\settings.h
+1508515897 c:\users\botpc\desktop\workspace\github\wproject\settings.h
 	<cstdio>
 	"FPS.h"
 
-1507847391 source:c:\users\botpc\desktop\workspace\github\wproject\capp_initialization.cpp
+1508515915 source:c:\users\botpc\desktop\workspace\github\wproject\capp_initialization.cpp
 	"CApp.h"
 
 1507893996 source:c:\users\user\desktop\workspace\wproject\cevent.cpp
@@ -525,53 +527,54 @@
 	<list>
 	"Renderable.h"
 
-1507848168 c:\users\botpc\desktop\workspace\github\wproject\fps.h
+1508450399 c:\users\botpc\desktop\workspace\github\wproject\fps.h
 	<SDL.h>
 	<cstdio>
 
-1507842616 c:\users\botpc\desktop\workspace\github\wproject\timer.h
+1508512097 c:\users\botpc\desktop\workspace\github\wproject\timer.h
 	<SDL.h>
 
 1507836126 c:\users\botpc\desktop\workspace\github\wproject\window.h
 	<SDL.h>
 
-1508020548 c:\users\botpc\desktop\workspace\github\wproject\texture.h
+1508450399 c:\users\botpc\desktop\workspace\github\wproject\texture.h
 	<SDL.h>
 	<cstdio>
 	<list>
 	"Renderable.h"
 
-1508020062 c:\users\botpc\desktop\workspace\github\wproject\crender.h
+1508450399 c:\users\botpc\desktop\workspace\github\wproject\crender.h
 	<SDL.h>
 	<set>
 	<algorithm>
 	<memory>
 	"Texture.h"
-	"Priority.h"
+	"Font.h"
 
-1507843181 source:c:\users\botpc\desktop\workspace\github\wproject\fps.cpp
+1508450399 source:c:\users\botpc\desktop\workspace\github\wproject\fps.cpp
 	"FPS.h"
 
-1508021070 source:c:\users\botpc\desktop\workspace\github\wproject\texture.cpp
+1508450399 source:c:\users\botpc\desktop\workspace\github\wproject\texture.cpp
 	"Texture.h"
 	"CRender.h"
 
-1507842616 source:c:\users\botpc\desktop\workspace\github\wproject\timer.cpp
+1508512220 source:c:\users\botpc\desktop\workspace\github\wproject\timer.cpp
 	"Timer.h"
 
 1505679078 source:c:\users\botpc\desktop\workspace\github\wproject\window.cpp
 	"Window.h"
 
-1508019843 c:\users\botpc\desktop\workspace\github\wproject\renderable.h
+1508514628 c:\users\botpc\desktop\workspace\github\wproject\renderable.h
 	<SDL.h>
 	<string>
 	<memory>
 	"Transform.h"
+	"Animation.h"
 
-1508021234 source:c:\users\botpc\desktop\workspace\github\wproject\crender.cpp
+1508450399 source:c:\users\botpc\desktop\workspace\github\wproject\crender.cpp
 	"CRender.h"
 
-1508019843 source:c:\users\botpc\desktop\workspace\github\wproject\renderable.cpp
+1508517204 source:c:\users\botpc\desktop\workspace\github\wproject\renderable.cpp
 	"Renderable.h"
 	"CRender.h"
 
@@ -627,4 +630,29 @@
 	"CRender.h"
 	<string>
 	<SDL.h>
+
+1508450399 c:\users\botpc\desktop\workspace\github\wproject\font.h
+	<SDL_ttf.h>
+	<string>
+
+1508509882 c:\users\botpc\desktop\workspace\github\wproject\text.h
+	"Renderable.h"
+	"Font.h"
+	"CRender.h"
+	<string>
+	<SDL.h>
+
+1508450399 source:c:\users\botpc\desktop\workspace\github\wproject\text.cpp
+	"Text.h"
+
+1508510502 source:c:\users\botpc\desktop\workspace\github\wproject\font.cpp
+	"Font.h"
+
+1508517830 source:c:\users\botpc\desktop\workspace\github\wproject\animation.cpp
+	"Animation.h"
+
+1508517684 c:\users\botpc\desktop\workspace\github\wproject\animation.h
+	<math.h>
+	<memory>
+	"Timer.h"
 

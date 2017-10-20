@@ -57,6 +57,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Animation.cpp">
+			<Option virtualFolder="Rendering/" />
+		</Unit>
+		<Unit filename="Animation.h">
+			<Option virtualFolder="Rendering/" />
+		</Unit>
 		<Unit filename="CApp.cpp" />
 		<Unit filename="CApp.h" />
 		<Unit filename="CApp_Initialization.cpp" />
@@ -66,7 +72,6 @@
 		<Unit filename="CEvent.h">
 			<Option virtualFolder="Events/" />
 		</Unit>
-		<Unit filename="CFPS.h" />
 		<Unit filename="CRender.cpp">
 			<Option virtualFolder="Rendering/" />
 		</Unit>
@@ -126,8 +131,12 @@
 		<Unit filename="Texture.h">
 			<Option virtualFolder="Rendering/" />
 		</Unit>
-		<Unit filename="Timer.cpp" />
-		<Unit filename="Timer.h" />
+		<Unit filename="Timer.cpp">
+			<Option virtualFolder="Mechanics/" />
+		</Unit>
+		<Unit filename="Timer.h">
+			<Option virtualFolder="Mechanics/" />
+		</Unit>
 		<Unit filename="Transform.cpp">
 			<Option virtualFolder="Mechanics/" />
 		</Unit>

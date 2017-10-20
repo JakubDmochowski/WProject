@@ -22,8 +22,13 @@ int CApp::execute() {
     #endif
 
     /// CRAP CODE
-    RenderablePtr temp = Renderable::create();
-    //Text temp1("Hah");
+    std::vector<RenderablePtr> craplist;
+    for(int i = 0; i < 100; ++i) {
+        TransformPtr tempTransform = std::make_shared<Transform>(Settings::getScreenWidth() / 10, Settings::getScreenHeight() / 10, Settings::getScreenWidth() / 10 * (i % 10), Settings::getScreenHeight() / 10 * (i / 10));
+        AnimationPtr tempAnimation = std::make_unique<Animation>(100, 100, 5, 100, false);
+        RenderablePtr temp = Renderable::create("asdf.bmp", tempTransform, std::move(tempAnimation));
+        craplist.push_back(temp);
+    }
     /// --CRAP CODE
 
     while(running) {
