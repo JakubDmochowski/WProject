@@ -1,49 +1,43 @@
 #define SDL_MAIN_HANDLED
 #include "CApp.h"
 
-#include <iostream>
 #include <cstdlib>
 
 CApp::CApp() {
     running = true;
-
-    CEvent eventHandler;
 }
 
-Uint32 fpsCounter(Uint32 interval, void* param) {
-    cout << Timer::GameTimerControl.getTime() << endl;
-    printf("Current FPS: %d\n", FPS::FPSControl.getFPS());
-    return interval;
-}
+#if defined showFPS
+    Uint32 fpsCounter(Uint32 interval, void* param) {
+        printf("Current FPS: %d\n", FPS::getFPS());
+        return interval;
+    }
+#endif
 
 int CApp::execute() {
     if(!initiate()) return 1;
-    int a[10] = {1,2,3,4,5,6,7,8,9,8};
-    SDL_TimerID WIP = SDL_AddTimer(1000, fpsCounter, nullptr); /// for debug purposes
 
-    // CRAP CODE
-    Renderable* costam = new Renderable();
-    costam->dst = new SDL_Rect();
-    costam->dst->w = 100;
-    costam->dst->h = 100;
+    #if defined showFPS
+        SDL_AddTimer(1000, fpsCounter, nullptr);
+    #endif
 
-    new Renderable("asdf.bmp");
-    // --CRAP CODE
+    /// CRAP CODE
+    std::vector<RenderablePtr> craplist;
+    for(int i = 0; i < 100; ++i) {
+        TransformPtr tempTransform = std::make_shared<Transform>(Settings::getScreenWidth() / 10, Settings::getScreenHeight() / 10, Settings::getScreenWidth() / 10 * (i % 10), Settings::getScreenHeight() / 10 * (i / 10));
+        AnimationPtr tempAnimation = std::make_unique<Animation>(100, 100, 5, 100, false);
+        RenderablePtr temp = Renderable::create("asdf.bmp", tempTransform, std::move(tempAnimation));
+        craplist.push_back(temp);
+    }
+    /// --CRAP CODE
 
     while(running) {
-        CEvent::eventHandler.handleEvents();
-        FPS::FPSControl.onLoop();
+        CEvent::handleEvents();
+        FPS::onLoop();
         CRender::handleRender();
-
-        // CRAP CODE
-        costam->dst->x++;
-        if(costam->dst->x > Settings::settings.getScreenWidth()) {
-            costam->dst->x = -100;
-            costam->dst->y++;
-        }
-        // --CRAP CODE
     }
-    SDL_DestroyWindow(Window::window);
+    SDL_DestroyWindow(window);
+    TTF_Quit();
     SDL_Quit();
 
     return 0;

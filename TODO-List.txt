@@ -12,3 +12,10 @@ Legend:
 -[==] Map
 	[+]Surface Class
 -[==] Physics
+
+entity
+animations
+depth in render
+maps
+EDIT texture in runtime
+maps multi-level graphics with different speeds of motion

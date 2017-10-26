@@ -1,7 +1,5 @@
 #include "CEvent.h"
 
-CEvent CEvent::eventHandler;
-
 CEvent::CEvent() {
 }
 

@@ -5,24 +5,28 @@
 		<Option title="WProject" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="Events\;Rendering\;" />
+		<Option virtualFolders="Events\;Rendering\;Mechanics\;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/WProject" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option projectCompilerOptionsRelation="-1" />
+				<Option projectCompilerOptionsRelation="2" />
 				<Option projectIncludeDirsRelation="-1" />
 				<Option projectLibDirsRelation="-1" />
 				<Compiler>
-					<Add option="-std=c++11" />
+					<Add option="-pedantic-errors" />
+					<Add option="-std=c++14" />
+					<Add option="-Dlite_debug" />
+					<Add option="-DshowFPS" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add library="mingw32" />
 					<Add library="SDL2main" />
 					<Add library="SDL2" />
+					<Add library="SDL2_ttf" />
 					<Add library="opengl32" />
 					<Add library="glu32" />
 				</Linker>
@@ -53,6 +57,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Animation.cpp">
+			<Option virtualFolder="Rendering/" />
+		</Unit>
+		<Unit filename="Animation.h">
+			<Option virtualFolder="Rendering/" />
+		</Unit>
 		<Unit filename="CApp.cpp" />
 		<Unit filename="CApp.h" />
 		<Unit filename="CApp_Initialization.cpp" />
@@ -62,15 +72,27 @@
 		<Unit filename="CEvent.h">
 			<Option virtualFolder="Events/" />
 		</Unit>
-		<Unit filename="CFPS.h" />
 		<Unit filename="CRender.cpp">
 			<Option virtualFolder="Rendering/" />
 		</Unit>
 		<Unit filename="CRender.h">
 			<Option virtualFolder="Rendering/" />
 		</Unit>
-		<Unit filename="FPS.cpp" />
-		<Unit filename="FPS.h" />
+		<Unit filename="Entity.h">
+			<Option virtualFolder="Mechanics/" />
+		</Unit>
+		<Unit filename="FPS.cpp">
+			<Option virtualFolder="Mechanics/" />
+		</Unit>
+		<Unit filename="FPS.h">
+			<Option virtualFolder="Mechanics/" />
+		</Unit>
+		<Unit filename="Font.cpp">
+			<Option virtualFolder="Rendering/" />
+		</Unit>
+		<Unit filename="Font.h">
+			<Option virtualFolder="Rendering/" />
+		</Unit>
 		<Unit filename="JoystickListener.cpp">
 			<Option virtualFolder="Events/" />
 		</Unit>
@@ -97,25 +119,35 @@
 		</Unit>
 		<Unit filename="Settings.cpp" />
 		<Unit filename="Settings.h" />
+		<Unit filename="Text.cpp">
+			<Option virtualFolder="Rendering/" />
+		</Unit>
+		<Unit filename="Text.h">
+			<Option virtualFolder="Rendering/" />
+		</Unit>
 		<Unit filename="Texture.cpp">
 			<Option virtualFolder="Rendering/" />
 		</Unit>
 		<Unit filename="Texture.h">
 			<Option virtualFolder="Rendering/" />
 		</Unit>
-		<Unit filename="Timer.cpp" />
-		<Unit filename="Timer.h" />
+		<Unit filename="Timer.cpp">
+			<Option virtualFolder="Mechanics/" />
+		</Unit>
+		<Unit filename="Timer.h">
+			<Option virtualFolder="Mechanics/" />
+		</Unit>
+		<Unit filename="Transform.cpp">
+			<Option virtualFolder="Mechanics/" />
+		</Unit>
+		<Unit filename="Transform.h">
+			<Option virtualFolder="Mechanics/" />
+		</Unit>
 		<Unit filename="UserDefinedListener.cpp">
 			<Option virtualFolder="Events/" />
 		</Unit>
 		<Unit filename="UserDefinedListener.h">
 			<Option virtualFolder="Events/" />
-		</Unit>
-		<Unit filename="Window.cpp">
-			<Option virtualFolder="Rendering/" />
-		</Unit>
-		<Unit filename="Window.h">
-			<Option virtualFolder="Rendering/" />
 		</Unit>
 		<Unit filename="WindowListener.cpp">
 			<Option virtualFolder="Events/" />
@@ -123,7 +155,6 @@
 		<Unit filename="WindowListener.h">
 			<Option virtualFolder="Events/" />
 		</Unit>
-		<Unit filename="define.h" />
 		<Unit filename="locale/localeEN.h" />
 		<Extensions>
 			<code_completion />

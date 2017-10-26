@@ -1,5 +1,4 @@
-#ifndef _CEVENT_H_
-    #define _CEVENT_H_
+#pragma once
 
 #include "KeyboardListener.h"
 #include "MouseListener.h"
@@ -11,17 +10,13 @@ class CEvent {
 
     public:
 
-        static CEvent eventHandler;
+        static void handleEvents();
 
-        void handleEvents();
+    private:
 
         explicit CEvent();
         virtual ~CEvent();
 
-    private:
-
-        virtual void OnEvent(SDL_Event* Event);
+        static void OnEvent(SDL_Event* Event);
 };
-
-#endif
 

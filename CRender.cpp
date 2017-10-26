@@ -1,20 +1,24 @@
 #include "CRender.h"
 
 SDL_Renderer* CRender::renderer;
-std::map<Texture*, std::list<Renderable*>> CRender::textures;
-std::map<std::string, Texture*> CRender::textureNames;
 
-CRender::CRender() {
-}
-
-CRender::~CRender() {
-}
+std::set<TexturePtr, CRenderTextureComparator> CRender::textures;
 
 void CRender::handleRender() {
     SDL_RenderClear(renderer);
-    for(auto const& i : textures) {
-        for(auto const& j : i.second) {
-            renderTexture(i.first, j->src, j->dst, j->angle, j->rotateCenter);
+    for(auto i = textures.begin(); i != textures.end();) {
+        for(auto j = (*i)->renderables.begin(); j != (*i)->renderables.end();) {
+            if(j->use_count() == 1) {
+                j = (*i)->renderables.erase(j);
+            } else {
+                renderTexture(*i, (*j)->getSrc(), (*j)->getDst(), (*j)->getAngle(), (*j)->getRotateCenter());
+                ++j;
+            }
+        }
+        if((*i)->renderables.size() == 0) {
+            i = textures.erase(i);
+        } else {
+            ++i;
         }
     }
     SDL_RenderPresent(renderer);
@@ -24,36 +28,31 @@ SDL_Renderer* CRender::getRenderer() const {
     return renderer;
 }
 
-void CRender::addTexture(Texture* newTexture, const std::string textureName) {
-    /// DELETE THAT
-    std::list<Renderable*> tempList;
-    textureNames.insert(std::pair<std::string, Texture*>(textureName, newTexture));
-    ///
-    textures.insert(std::pair<Texture*, std::list<Renderable*>>(newTexture, tempList));
+inline void CRender::addTexture(TexturePtr newTexture) {
+    textures.insert(textures.end(), std::move(newTexture));
 }
 
-void CRender::addRenderableToTexture(Renderable* renderable, const std::string texture) {
-    auto tmpTextureIterator = textureNames.find(texture);
-    if(tmpTextureIterator == textureNames.end()) {
-        Texture* tempTexture = new Texture();
-        std::string tmpStr = "./gfx/" + texture;
-        if(!tempTexture->loadTexture(tmpStr.c_str())){
-            if((tmpTextureIterator = textureNames.find("default.bmp")) != textureNames.end()) {
-                tempTexture->loadTexture("./gfx/default.bmp");
-                addTexture(tempTexture, "default.bmp");
-                tmpTextureIterator = textureNames.find("default.bmp");
-            } else {
-                delete tempTexture;
+void CRender::addRenderableToTexture(const RenderablePtr& renderable) {
+    auto cmpTexture = [&](const TexturePtr& t){ return strcmp(t->textureName.c_str(), renderable->getTextureName().c_str()) == 0;};
+    auto cmpDefault = [&](const TexturePtr& t){ return strcmp(t->textureName.c_str(), "default.bmp") == 0;};
+
+    auto tmpTextureIterator = std::find_if(textures.begin(), textures.end(), cmpTexture);
+    if(tmpTextureIterator == textures.end()) {
+        TexturePtr tempTexture(new Texture());
+        if(!tempTexture->loadTexture(renderable->getTextureName().c_str())) {
+            if((tmpTextureIterator = std::find_if(textures.begin(), textures.end(), cmpDefault)) != textures.end()) {
+                tempTexture->loadTexture("default.bmp");
+                addTexture(std::move(tempTexture));
+                tmpTextureIterator = std::find_if(textures.begin(), textures.end(), cmpDefault);
             }
         } else {
-            addTexture(tempTexture, texture);
-            tmpTextureIterator = textureNames.find(texture);
+            addTexture(std::move(tempTexture));
+            tmpTextureIterator = std::find_if(textures.begin(), textures.end(), cmpTexture);
         }
     }
-    std::list<Renderable*>* tempList = &textures.find(tmpTextureIterator->second)->second;
-    tempList->insert(tempList->end(), renderable);
+    tmpTextureIterator->get()->renderables.insert(tmpTextureIterator->get()->renderables.end(), renderable);
 }
 
-void CRender::renderTexture(Texture* toRender, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* rotateCenter) {
+void CRender::renderTexture(const TexturePtr& toRender, SDL_Rect* srcrect, SDL_Rect* dstrect, double angle, SDL_Point* rotateCenter) {
     SDL_RenderCopyEx(renderer, toRender->getTexture(), srcrect, dstrect, angle, rotateCenter, SDL_FLIP_NONE);
 }

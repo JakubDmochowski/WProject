@@ -1,5 +1,4 @@
-#ifndef _JOYLISTEN_H_
-#define _JOYLISTEN_H_
+#pragma once
 
 #include <SDL.h>
 #include <vector>
@@ -23,6 +22,4 @@ struct JoystickListener {
 
         virtual void OnJoyBall(Uint8 which, Uint8 ball, Sint16 xrel, Sint16 yrel);
 };
-
-#endif // _JOYLISTEN_H_
 

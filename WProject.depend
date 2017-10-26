@@ -323,13 +323,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1506089436 source:c:\users\botpc\desktop\workspace\github\wproject\capp.cpp
+1508517553 source:c:\users\botpc\desktop\workspace\github\wproject\capp.cpp
 	"CApp.h"
-	<iostream>
 	<cstdlib>
 
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\capp.h
+1508450399 c:\users\botpc\desktop\workspace\github\wproject\capp.h
 	<SDL.h>
+	<SDL_ttf.h>
 	<ctime>
 	<cstdio>
 	<gl/gl.h>
@@ -337,44 +337,43 @@
 	"locale/localeEN.h"
 	"FPS.h"
 	"Timer.h"
-	"define.h"
 	"Settings.h"
 	"CEvent.h"
-	"Window.h"
-	"Texture.h"
 	"CRender.h"
+	"Entity.h"
+	"Text.h"
 
-1493813273 c:\users\botpc\desktop\workspace\github\wproject\define.h
+1507847030 c:\users\botpc\desktop\workspace\github\wproject\define.h
 
-1505679078 source:c:\users\botpc\desktop\workspace\github\wproject\cevent.cpp
+1507842822 source:c:\users\botpc\desktop\workspace\github\wproject\cevent.cpp
 	"CEvent.h"
 
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\cevent.h
+1507842870 c:\users\botpc\desktop\workspace\github\wproject\cevent.h
 	"KeyboardListener.h"
 	"MouseListener.h"
 	"WindowListener.h"
 	"JoystickListener.h"
 	"UserDefinedListener.h"
 
-1493813273 c:\users\botpc\desktop\workspace\github\wproject\locale\localeen.h
+1507847084 c:\users\botpc\desktop\workspace\github\wproject\locale\localeen.h
 
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\keyboardlistener.h
+1507836125 c:\users\botpc\desktop\workspace\github\wproject\keyboardlistener.h
 	<SDL.h>
 	<vector>
 
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\mouselistener.h
+1507836125 c:\users\botpc\desktop\workspace\github\wproject\mouselistener.h
 	<SDL.h>
 	<vector>
 
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\windowlistener.h
+1507836126 c:\users\botpc\desktop\workspace\github\wproject\windowlistener.h
 	<SDL.h>
 	<vector>
 
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\joysticklistener.h
+1507836125 c:\users\botpc\desktop\workspace\github\wproject\joysticklistener.h
 	<SDL.h>
 	<vector>
 
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\userdefinedlistener.h
+1507836126 c:\users\botpc\desktop\workspace\github\wproject\userdefinedlistener.h
 	<SDL.h>
 	<vector>
 
@@ -393,60 +392,60 @@
 1493813273 source:c:\users\botpc\desktop\workspace\github\wproject\windowlistener.cpp
 	"WindowListener.h"
 
-1505679078 source:c:\users\botpc\desktop\workspace\github\wproject\settings.cpp
+1508516007 source:c:\users\botpc\desktop\workspace\github\wproject\settings.cpp
 	"Settings.h"
 
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\settings.h
+1508515897 c:\users\botpc\desktop\workspace\github\wproject\settings.h
 	<cstdio>
 	"FPS.h"
 
-1505679078 source:c:\users\botpc\desktop\workspace\github\wproject\capp_initialization.cpp
+1508515915 source:c:\users\botpc\desktop\workspace\github\wproject\capp_initialization.cpp
 	"CApp.h"
 
-1507291413 source:c:\users\user\desktop\workspace\wproject\cevent.cpp
+1507893996 source:c:\users\user\desktop\workspace\wproject\cevent.cpp
 	"CEvent.h"
 
-1507291413 c:\users\user\desktop\workspace\wproject\cevent.h
+1507893996 c:\users\user\desktop\workspace\wproject\cevent.h
 	"KeyboardListener.h"
 	"MouseListener.h"
 	"WindowListener.h"
 	"JoystickListener.h"
 	"UserDefinedListener.h"
 
-1505678956 c:\users\user\desktop\workspace\wproject\keyboardlistener.h
+1507729133 c:\users\user\desktop\workspace\wproject\keyboardlistener.h
 	<SDL.h>
 	<vector>
 
-1505678956 c:\users\user\desktop\workspace\wproject\mouselistener.h
+1507729133 c:\users\user\desktop\workspace\wproject\mouselistener.h
 	<SDL.h>
 	<vector>
 
-1505678956 c:\users\user\desktop\workspace\wproject\windowlistener.h
+1507729133 c:\users\user\desktop\workspace\wproject\windowlistener.h
 	<SDL.h>
 	<vector>
 
-1505678956 c:\users\user\desktop\workspace\wproject\joysticklistener.h
+1507729133 c:\users\user\desktop\workspace\wproject\joysticklistener.h
 	<SDL.h>
 	<vector>
 
-1505678956 c:\users\user\desktop\workspace\wproject\userdefinedlistener.h
+1507729133 c:\users\user\desktop\workspace\wproject\userdefinedlistener.h
 	<SDL.h>
 	<vector>
 
 1505678956 source:c:\users\user\desktop\workspace\wproject\settings.cpp
 	"Settings.h"
 
-1505678956 c:\users\user\desktop\workspace\wproject\settings.h
+1507729089 c:\users\user\desktop\workspace\wproject\settings.h
 	<cstdio>
 	"FPS.h"
 
-1507306461 source:c:\users\user\desktop\workspace\wproject\capp.cpp
+1508449028 source:c:\users\user\desktop\workspace\wproject\capp.cpp
 	"CApp.h"
-	<iostream>
 	<cstdlib>
 
-1507293785 c:\users\user\desktop\workspace\wproject\capp.h
+1508445512 c:\users\user\desktop\workspace\wproject\capp.h
 	<SDL.h>
+	<SDL_ttf.h>
 	<ctime>
 	<cstdio>
 	<gl/gl.h>
@@ -454,16 +453,15 @@
 	"locale/localeEN.h"
 	"FPS.h"
 	"Timer.h"
-	"define.h"
 	"Settings.h"
 	"CEvent.h"
-	"Window.h"
-	"Texture.h"
 	"CRender.h"
+	"Entity.h"
+	"Text.h"
 
-1493812859 c:\users\user\desktop\workspace\wproject\locale\localeen.h
+1507893996 c:\users\user\desktop\workspace\wproject\locale\localeen.h
 
-1493812859 c:\users\user\desktop\workspace\wproject\define.h
+1507732583 c:\users\user\desktop\workspace\wproject\define.h
 
 1493812859 source:c:\users\user\desktop\workspace\wproject\joysticklistener.cpp
 	"JoystickListener.h"
@@ -480,13 +478,13 @@
 1493812859 source:c:\users\user\desktop\workspace\wproject\windowlistener.cpp
 	"WindowListener.h"
 
-1507296578 source:c:\users\user\desktop\workspace\wproject\capp_initialization.cpp
+1508271795 source:c:\users\user\desktop\workspace\wproject\capp_initialization.cpp
 	"CApp.h"
 
-1507296578 source:c:\users\user\desktop\workspace\wproject\timer.cpp
+1507893996 source:c:\users\user\desktop\workspace\wproject\timer.cpp
 	"Timer.h"
 
-1505678956 c:\users\user\desktop\workspace\wproject\timer.h
+1507893996 c:\users\user\desktop\workspace\wproject\timer.h
 	<SDL.h>
 
 1505486302 source:c:\users\user\desktop\workspace\wproject\cfps.cpp
@@ -495,91 +493,166 @@
 1505486446 c:\users\user\desktop\workspace\wproject\cfps.h
 	<SDL.h>
 
-1505678956 c:\users\user\desktop\workspace\wproject\fps.h
+1508270648 c:\users\user\desktop\workspace\wproject\fps.h
 	<SDL.h>
 	<cstdio>
 
-1505678956 source:c:\users\user\desktop\workspace\wproject\fps.cpp
+1508270664 source:c:\users\user\desktop\workspace\wproject\fps.cpp
 	"FPS.h"
 
-1507296578 c:\users\user\desktop\workspace\wproject\window.h
+1507729133 c:\users\user\desktop\workspace\wproject\window.h
 	<SDL.h>
 
 1505678956 source:c:\users\user\desktop\workspace\wproject\window.cpp
 	"Window.h"
 
-1507307937 source:c:\users\user\desktop\workspace\wproject\crender.cpp
+1508449816 source:c:\users\user\desktop\workspace\wproject\crender.cpp
 	"CRender.h"
 
-1507301980 c:\users\user\desktop\workspace\wproject\crender.h
+1508449832 c:\users\user\desktop\workspace\wproject\crender.h
 	<SDL.h>
+	<set>
+	<algorithm>
+	<memory>
+	"Texture.h"
+	"Font.h"
+
+1508449816 source:c:\users\user\desktop\workspace\wproject\texture.cpp
+	"Texture.h"
+	"CRender.h"
+
+1508449782 c:\users\user\desktop\workspace\wproject\texture.h
+	<SDL.h>
+	<cstdio>
 	<list>
-	<map>
-	<algorithm>
-	"CRender.h"
-	"Window.h"
-	"Texture.h"
 	"Renderable.h"
 
-1507307050 source:c:\users\user\desktop\workspace\wproject\texture.cpp
-	"Texture.h"
-	"CRender.h"
-
-1507307008 c:\users\user\desktop\workspace\wproject\texture.h
+1508450399 c:\users\botpc\desktop\workspace\github\wproject\fps.h
 	<SDL.h>
 	<cstdio>
 
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\fps.h
+1508512097 c:\users\botpc\desktop\workspace\github\wproject\timer.h
+	<SDL.h>
+
+1507836126 c:\users\botpc\desktop\workspace\github\wproject\window.h
+	<SDL.h>
+
+1508450399 c:\users\botpc\desktop\workspace\github\wproject\texture.h
 	<SDL.h>
 	<cstdio>
-
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\timer.h
-	<SDL.h>
-
-1505679078 c:\users\botpc\desktop\workspace\github\wproject\window.h
-	<SDL.h>
-
-1506087705 c:\users\botpc\desktop\workspace\github\wproject\texture.h
-	<SDL.h>
-	<cstdio>
-
-1506096338 c:\users\botpc\desktop\workspace\github\wproject\crender.h
-	<SDL.h>
-	<vector>
-	<map>
-	<algorithm>
-	"CRender.h"
-	"Window.h"
-	"Texture.h"
+	<list>
 	"Renderable.h"
 
-1505679078 source:c:\users\botpc\desktop\workspace\github\wproject\fps.cpp
+1508450399 c:\users\botpc\desktop\workspace\github\wproject\crender.h
+	<SDL.h>
+	<set>
+	<algorithm>
+	<memory>
+	"Texture.h"
+	"Font.h"
+
+1508450399 source:c:\users\botpc\desktop\workspace\github\wproject\fps.cpp
 	"FPS.h"
 
-1505679078 source:c:\users\botpc\desktop\workspace\github\wproject\texture.cpp
+1508450399 source:c:\users\botpc\desktop\workspace\github\wproject\texture.cpp
 	"Texture.h"
 	"CRender.h"
 
-1505679078 source:c:\users\botpc\desktop\workspace\github\wproject\timer.cpp
+1508512220 source:c:\users\botpc\desktop\workspace\github\wproject\timer.cpp
 	"Timer.h"
 
 1505679078 source:c:\users\botpc\desktop\workspace\github\wproject\window.cpp
 	"Window.h"
 
-1506088593 c:\users\botpc\desktop\workspace\github\wproject\renderable.h
-	<SDL.h>
-
-1506113211 source:c:\users\botpc\desktop\workspace\github\wproject\crender.cpp
-	"CRender.h"
-
-1506089255 source:c:\users\botpc\desktop\workspace\github\wproject\renderable.cpp
-	"Renderable.h"
-
-1507303194 c:\users\user\desktop\workspace\wproject\renderable.h
+1508514628 c:\users\botpc\desktop\workspace\github\wproject\renderable.h
 	<SDL.h>
 	<string>
+	<memory>
+	"Transform.h"
+	"Animation.h"
 
-1507302653 source:c:\users\user\desktop\workspace\wproject\renderable.cpp
+1508450399 source:c:\users\botpc\desktop\workspace\github\wproject\crender.cpp
+	"CRender.h"
+
+1508517204 source:c:\users\botpc\desktop\workspace\github\wproject\renderable.cpp
 	"Renderable.h"
 	"CRender.h"
+
+1508450103 c:\users\user\desktop\workspace\wproject\renderable.h
+	<SDL.h>
+	<string>
+	<memory>
+	"Transform.h"
+
+1508449243 source:c:\users\user\desktop\workspace\wproject\renderable.cpp
+	"Renderable.h"
+	"CRender.h"
+
+1507893996 c:\users\user\desktop\workspace\wproject\entity.h
+	<memory>
+	"Renderable.h"
+
+1507838097 c:\users\botpc\desktop\workspace\github\wproject\entity.h
+	<memory>
+	"Renderable.h"
+
+1508019843 c:\users\botpc\desktop\workspace\github\wproject\transform.h
+	<memory>
+	<SDL.h>
+
+1508019843 source:c:\users\botpc\desktop\workspace\github\wproject\transform.cpp
+	"Transform.h"
+
+1508015922 c:\users\user\desktop\workspace\wproject\transform.h
+	<memory>
+	<SDL.h>
+
+1508016003 source:c:\users\user\desktop\workspace\wproject\transform.cpp
+	"Transform.h"
+
+1507996857 c:\users\user\desktop\workspace\wproject\priority.h
+
+1508019843 c:\users\botpc\desktop\workspace\github\wproject\priority.h
+
+1508442976 c:\users\user\desktop\workspace\wproject\font.h
+	<SDL_ttf.h>
+	<string>
+
+1508443193 source:c:\users\user\desktop\workspace\wproject\font.cpp
+	"Font.h"
+
+1508449938 source:c:\users\user\desktop\workspace\wproject\text.cpp
+	"Text.h"
+
+1508444970 c:\users\user\desktop\workspace\wproject\text.h
+	"Renderable.h"
+	"Font.h"
+	"CRender.h"
+	<string>
+	<SDL.h>
+
+1508450399 c:\users\botpc\desktop\workspace\github\wproject\font.h
+	<SDL_ttf.h>
+	<string>
+
+1508509882 c:\users\botpc\desktop\workspace\github\wproject\text.h
+	"Renderable.h"
+	"Font.h"
+	"CRender.h"
+	<string>
+	<SDL.h>
+
+1508450399 source:c:\users\botpc\desktop\workspace\github\wproject\text.cpp
+	"Text.h"
+
+1508510502 source:c:\users\botpc\desktop\workspace\github\wproject\font.cpp
+	"Font.h"
+
+1508517830 source:c:\users\botpc\desktop\workspace\github\wproject\animation.cpp
+	"Animation.h"
+
+1508517684 c:\users\botpc\desktop\workspace\github\wproject\animation.h
+	<math.h>
+	<memory>
+	"Timer.h"
 

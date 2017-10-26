@@ -1,6 +1,3 @@
-#ifndef _LOCALE_
-#define _LOCALE_
+#pragma once
 
 #define TXT_TITLE "WProject"
-
-#endif // _LOCALE_

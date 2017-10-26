@@ -1,104 +1,26 @@
 #include "Timer.h"
 
-Timer Timer::GameTimerControl;
+Timer::Timer() {
+    startTick = SDL_GetTicks();
+    pausedTick = 0;
 
-Timer::Timer()
-{
-    mStartTicks = 0;
-    mPausedTicks = 0;
-
-    mPaused = false;
-    mStarted = false;
+    paused = false;
 }
 
-void Timer::start()
-{
-    //Start the timer
-    mStarted = true;
 
-    //Unpause the timer
-    mPaused = false;
-
-    //Get the current clock time
-    mStartTicks = SDL_GetTicks();
-    mPausedTicks = 0;
+void Timer::pause() {
+    if(paused) return;
+    paused = true;
+    pausedTick = SDL_GetTicks();
 }
 
-void Timer::stop()
-{
-    //Stop the timer
-    mStarted = false;
-
-    //Unpause the timer
-    mPaused = false;
-
-    //Clear tick variables
-    mStartTicks = 0;
-    mPausedTicks = 0;
+void Timer::unpause() {
+    if(!paused) return;
+    paused = false;
+    startTick += SDL_GetTicks() - pausedTick;
 }
 
-void Timer::pause()
-{
-    //If the timer is running and isn't already paused
-    if( mStarted && !mPaused )
-    {
-        //Pause the timer
-        mPaused = true;
-
-        //Calculate the paused ticks
-        mPausedTicks = SDL_GetTicks() - mStartTicks;
-        mStartTicks = 0;
-    }
-}
-
-void Timer::unpause()
-{
-    //If the timer is running and paused
-    if( mStarted && mPaused )
-    {
-        //Unpause the timer
-        mPaused = false;
-
-        //Reset the starting ticks
-        mStartTicks = SDL_GetTicks() - mPausedTicks;
-
-        //Reset the paused ticks
-        mPausedTicks = 0;
-    }
-}
-
-unsigned int Timer::getTime() const
-{
-    //The actual timer time
-    unsigned int time = 0;
-
-    //If the timer is running
-    if( mStarted )
-    {
-        //If the timer is paused
-        if( mPaused )
-        {
-            //Return the number of ticks when the timer was paused
-            time = mPausedTicks;
-        }
-        else
-        {
-            //Return the current time minus the start time
-            time = SDL_GetTicks() - mStartTicks;
-        }
-    }
-
-    return time;
-}
-
-bool Timer::isStarted() const
-{
-    //Timer is running and paused or unpaused
-    return mStarted;
-}
-
-bool Timer::isPaused() const
-{
-    //Timer is running and paused
-    return mPaused && mStarted;
+unsigned int Timer::getTime() const {
+    if(paused) return pausedTick - startTick;
+    return SDL_GetTicks() - startTick;
 }

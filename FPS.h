@@ -1,34 +1,26 @@
-#ifndef _FPS_H_
-    #define _FPS_H_
+#pragma once
 
 #include <SDL.h>
 #include <cstdio>
 
 class FPS {
     public:
-        static FPS FPSControl;
+        static void    onLoop();
+        static void    onInit();
+
+        static unsigned int     getFPS();
+        static double           getSpeedFactor();
+        static unsigned int     getTickFactor();
 
     private:
-        int     lastSec;
-        int     lastTime;
+        static unsigned int     lastSec;
+        static unsigned int     lastTime;
 
-        double  speedFactor;
+        static double           speedFactor;
 
-        int     frames;
-        int     framesCount;
+        static unsigned int     frames;
+        static unsigned int     framesCount;
 
-        int     ticks;
-
-    public:
+        static unsigned int     ticks;
         FPS();
-
-        void    onLoop();
-
-    public:
-        int     getFPS() const;
-
-        double  getSpeedFactor() const;
-        int     getTickFactor() const;
 };
-
-#endif //_FPS_H_

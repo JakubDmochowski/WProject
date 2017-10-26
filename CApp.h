@@ -1,7 +1,7 @@
-#ifndef _CAPP_H_
-#define _CAPP_H_
+#pragma once
 
 #include <SDL.h>
+#include <SDL_ttf.h>
 #include <ctime>
 #include <cstdio>
 #include <gl/gl.h>
@@ -11,18 +11,15 @@
 
 #include "FPS.h"
 #include "Timer.h"
-#include "define.h"
 #include "Settings.h"
 #include "CEvent.h"
-#include "Window.h"
-#include "Texture.h"
 #include "CRender.h"
+#include "Entity.h"
+#include "Text.h"
 
-struct CApp : KeyboardListener, WindowListener {
+struct CApp : KeyboardListener, WindowListener, MouseListener {
         bool running;
-
-        //SDL_Window* window;
-        SDL_GLContext context;
+        SDL_Window* window;
 
         CApp();
 
@@ -36,5 +33,3 @@ struct CApp : KeyboardListener, WindowListener {
 
         void OnExit();
 };
-
-#endif // _CAPP_H_
